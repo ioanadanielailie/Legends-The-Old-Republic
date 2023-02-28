@@ -5,23 +5,32 @@ using UnityEngine;
 public class Player1Move : MonoBehaviour
 {
     private Animator Animator;
+    public float CharacterWalkSpeed=0.001f;
+    private bool IsJumping = false;
+    private AnimatorStateInfo Player1Layer0;
     // Start is called before the first frame update
     void Start()
     {
-       Animator=GetComponent<Animator>(); 
+       Animator=GetComponentInChildren<Animator>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
         //Walking left and right
-        if(Input.GetAxis("Horizontal")>0)
+        if (Player1Layer0.IsTag("Motion"))
         {
-            Animator.SetBool("Forward", true);
-        }
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            Animator.SetBool("Backward", true);
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                Animator.SetBool("Forward", true);
+                transform.Translate(CharacterWalkSpeed, 0, 0);
+            }
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                Animator.SetBool("Backward", true);
+                transform.Translate(-CharacterWalkSpeed, 0, 0);
+            }
         }
         if (Input.GetAxis("Horizontal") == 0)
         {
@@ -31,7 +40,12 @@ public class Player1Move : MonoBehaviour
         //Jumping and crouching
         if (Input.GetAxis("Vertical") > 0)
         {
-            Animator.SetTrigger("Jump");
+            if (IsJumping == false)
+            {
+               IsJumping = true;
+               Animator.SetTrigger("Jump");
+                StartCoroutine(JumpPause());
+            }
         }
         if (Input.GetAxis("Vertical") < 0)
         {
@@ -41,5 +55,11 @@ public class Player1Move : MonoBehaviour
         {
             Animator.SetBool("Crouch", false);
         }
+    }
+
+    IEnumerator JumpPause()
+    {
+        yield return new WaitForSeconds(1.0f);
+        IsJumping = false;
     }
 }

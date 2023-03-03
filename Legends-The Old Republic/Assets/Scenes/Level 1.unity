@@ -2395,6 +2395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterWalkSpeed: 0.005
+  Player1: {fileID: 1698011696}
+  Opponent: {fileID: 1668708676}
 --- !u!54 &1698011698
 Rigidbody:
   m_ObjectHideFlags: 0

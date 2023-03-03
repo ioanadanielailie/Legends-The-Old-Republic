@@ -10,9 +10,16 @@ public class Player1Move : MonoBehaviour
     private AnimatorStateInfo Player1Layer0;
     private bool CharacterCanWalkRight = true;
     private bool CharacterCanWalkLeft = true;
+    public GameObject Player1;
+    public GameObject Opponent;
+    private Vector3 OpponentPosition;
+    private bool FacingLeft=false;
+    private bool FacingRight=true;
     // Start is called before the first frame update
     void Start()
     {
+        FacingLeft= false;
+        FacingRight = true;
        Animator=GetComponentInChildren<Animator>(); 
     }
 
@@ -36,6 +43,24 @@ public class Player1Move : MonoBehaviour
             CharacterCanWalkRight = true;
             CharacterCanWalkLeft = true;
         }
+
+        //Get the opponent's position
+        OpponentPosition=Opponent.transform.position;
+
+        //Facing left or right of the Opponent
+        if(OpponentPosition.x>Player1.transform.position.x)
+        {
+            StartCoroutine(FaceLeft());
+        }
+        if (OpponentPosition.x < Player1.transform.position.x)
+        {
+            StartCoroutine(FaceRight());
+        }
+
+
+
+
+
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
@@ -87,5 +112,25 @@ public class Player1Move : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         IsJumping = false;
+    }
+    IEnumerator FaceLeft() 
+    {
+        if (FacingLeft == true)
+        {
+            FacingLeft = false;
+            FacingRight = true;
+            yield return new WaitForSeconds(0.15f);
+            Player1.transform.Rotate(0, -180, 0);
+        }
+    }
+    IEnumerator FaceRight()
+    {
+        if (FacingRight == true)
+        {
+            FacingRight = false;
+            FacingLeft = true;
+            yield return new WaitForSeconds(0.15f);
+            Player1.transform.Rotate(0, 180, 0);
+        }
     }
 }

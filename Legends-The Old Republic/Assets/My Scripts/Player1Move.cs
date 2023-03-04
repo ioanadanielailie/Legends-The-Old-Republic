@@ -20,7 +20,8 @@ public class Player1Move : MonoBehaviour
     {
         FacingLeft= false;
         FacingRight = true;
-       Animator=GetComponentInChildren<Animator>(); 
+       Animator=GetComponentInChildren<Animator>();
+       StartCoroutine(FaceRight());
     }
 
     // Update is called once per frame
@@ -28,9 +29,10 @@ public class Player1Move : MonoBehaviour
     {
         //Listen to the Animator
         Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
+
         //Cannot exit screen
         Vector3 ScreenBounds=Camera.main.WorldToScreenPoint(this.transform.position);
-        if(ScreenBounds.x>Screen.width-200)
+        if(ScreenBounds.x > Screen.width-150)
         {
             CharacterCanWalkRight= false;
         }
@@ -38,7 +40,7 @@ public class Player1Move : MonoBehaviour
         {
             CharacterCanWalkLeft = false;
         }
-        else if(ScreenBounds.x< Screen.width-200 && ScreenBounds.x>200) 
+        else if(ScreenBounds.x > 200 && ScreenBounds.x < Screen.width-150) 
         {
             CharacterCanWalkRight = true;
             CharacterCanWalkLeft = true;
@@ -48,7 +50,7 @@ public class Player1Move : MonoBehaviour
         OpponentPosition=Opponent.transform.position;
 
         //Facing left or right of the Opponent
-        if(OpponentPosition.x>Player1.transform.position.x)
+        if(OpponentPosition.x > Player1.transform.position.x)
         {
             StartCoroutine(FaceLeft());
         }
@@ -119,8 +121,9 @@ public class Player1Move : MonoBehaviour
         {
             FacingLeft = false;
             FacingRight = true;
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(1.0f);
             Player1.transform.Rotate(0, -180, 0);
+            Animator.SetLayerWeight(1, 0);
         }
     }
     IEnumerator FaceRight()
@@ -129,8 +132,9 @@ public class Player1Move : MonoBehaviour
         {
             FacingRight = false;
             FacingLeft = true;
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(1.0f);
             Player1.transform.Rotate(0, 180, 0);
+            Animator.SetLayerWeight(1, 1);
         }
     }
 }

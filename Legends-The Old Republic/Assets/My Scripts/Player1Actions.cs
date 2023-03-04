@@ -6,15 +6,20 @@ public class Player1Actions : MonoBehaviour
 {
     public float CharacterJumpSpeed = 1.0f;
     public GameObject Player1;
+    private Animator Animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Animator.SetTrigger("LightPunch");
+        }
         
     }
      public void JumpUp()

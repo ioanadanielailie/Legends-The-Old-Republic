@@ -66,20 +66,42 @@ public class Player1Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if(FacingRight == true)
             {
-                if (CharacterCanWalkRight == true)
+                if (Input.GetAxis("Horizontal") > 0)
                 {
-                    Animator.SetBool("Forward", true);
-                    transform.Translate(CharacterWalkSpeed, 0, 0);
+                    if (CharacterCanWalkRight == true)
+                    {
+                        Animator.SetBool("Forward", true);
+                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                    }
+                }
+                if (Input.GetAxis("Horizontal") < 0)
+                {
+                    if (CharacterCanWalkLeft == true)
+                    {
+                        Animator.SetBool("Backward", true);
+                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                    }
                 }
             }
-            if (Input.GetAxis("Horizontal") < 0)
+            else if(FacingLeft==true)
             {
-                if (CharacterCanWalkLeft == true)
+                if (Input.GetAxis("Horizontal") > 0)
                 {
-                    Animator.SetBool("Backward", true);
-                    transform.Translate(-CharacterWalkSpeed, 0, 0);
+                    if (CharacterCanWalkRight == true)
+                    {
+                        Animator.SetBool("Forward", true);
+                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                    }
+                }
+                if (Input.GetAxis("Horizontal") < 0)
+                {
+                    if (CharacterCanWalkLeft == true)
+                    {
+                        Animator.SetBool("Backward", true);
+                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                    }
                 }
             }
         }
@@ -121,7 +143,7 @@ public class Player1Move : MonoBehaviour
         {
             FacingLeft = false;
             FacingRight = true;
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.01f);
             Player1.transform.Rotate(0, -180, 0);
             Animator.SetLayerWeight(1, 0);
         }
@@ -132,7 +154,7 @@ public class Player1Move : MonoBehaviour
         {
             FacingRight = false;
             FacingLeft = true;
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(0.01f);
             Player1.transform.Rotate(0, 180, 0);
             Animator.SetLayerWeight(1, 1);
         }

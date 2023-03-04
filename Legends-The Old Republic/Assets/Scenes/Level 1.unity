@@ -1019,7 +1019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44f4d38f4f01224592dbda8c89b5016, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44f4d38f4f01224592dbda8c89b5016, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d971c7e175e6be845befb6d709e16c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterJumpSpeed: 0.3
+  CharacterJumpSpeed: 0.2
   Player1: {fileID: 1698011696}
 --- !u!1 &1668708676 stripped
 GameObject:

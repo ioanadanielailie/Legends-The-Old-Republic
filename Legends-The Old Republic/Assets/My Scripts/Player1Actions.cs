@@ -10,10 +10,14 @@ public class Player1Actions : MonoBehaviour
     private AnimatorStateInfo Player1Layer0;
     public float PunchMove = 2.0f;
     private bool HeavyMoving=false;
+    private AudioSource MyPlayerAudioSource;
+    public AudioClip Punch;
+    public AudioClip Kick;
     // Start is called before the first frame update
     void Start()
     {
         Animator = GetComponent<Animator>();
+        MyPlayerAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +28,7 @@ public class Player1Actions : MonoBehaviour
         if(HeavyMoving==true)
         {
             Player1.transform.Translate(PunchMove* Time.deltaTime, 0, 0);
+            
         }
         
 
@@ -103,6 +108,17 @@ public class Player1Actions : MonoBehaviour
     {
         StartCoroutine(PunchSlideSmoothly());
     }
+    public void PunchSound()
+    {
+        MyPlayerAudioSource.clip = Punch;
+        MyPlayerAudioSource.Play();
+    }
+    public void KickSound()
+    {
+        MyPlayerAudioSource.clip = Kick;
+        MyPlayerAudioSource.Play();
+    }
+
 
     IEnumerator PunchSlideSmoothly() 
     {

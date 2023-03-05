@@ -7,6 +7,7 @@ public class Player1Actions : MonoBehaviour
     public float CharacterJumpSpeed = 1.0f;
     public GameObject Player1;
     private Animator Animator;
+    private AnimatorStateInfo Player1Layer0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,14 @@ public class Player1Actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+
+        //Listen to the animator
+        Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
+
+        //Standing attacks
+        if (Player1Layer0.IsTag("Motion"))
+        { 
+            if (Input.GetButtonDown("Fire1"))
         {
             Animator.SetTrigger("LightPunch");
         }
@@ -32,6 +40,26 @@ public class Player1Actions : MonoBehaviour
         {
             Animator.SetTrigger("HeavyKick");
         }
+        }
+
+        if(Player1Layer0.IsTag("Crouching"))
+        {
+            if(Input.GetButtonDown("Fire3"))
+            {
+                Animator.SetTrigger("LightKick");
+            }
+        }
+
+        //Aerial moves
+        if (Player1Layer0.IsTag("Jumping"))
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                Animator.SetTrigger("HeavyKick");
+            }
+        }
+
+
 
     }
      public void JumpUp()

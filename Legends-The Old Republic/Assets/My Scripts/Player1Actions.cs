@@ -8,6 +8,8 @@ public class Player1Actions : MonoBehaviour
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
+    public float PunchMove = 2.0f;
+    private bool HeavyMoving=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,13 @@ public class Player1Actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //Heavy Punch Slide Smoothly
+        if(HeavyMoving==true)
+        {
+            Player1.transform.Translate(PunchMove* Time.deltaTime, 0, 0);
+        }
+        
 
         //Listen to the animator
         Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
@@ -76,5 +85,18 @@ public class Player1Actions : MonoBehaviour
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
         Player1.transform.Translate(-0.1f, 0, 0);
+    }
+
+    public void MoveForHeavyPunch()
+    {
+        StartCoroutine(PunchSlideSmoothly());
+    }
+
+    IEnumerator PunchSlideSmoothly() 
+    {
+        HeavyMoving= true;
+        yield return new WaitForSeconds(0.1f);
+        HeavyMoving = false;
+
     }
 }

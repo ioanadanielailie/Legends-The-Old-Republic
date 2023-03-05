@@ -49,9 +49,21 @@ public class Player1Actions : MonoBehaviour
         {
             Animator.SetTrigger("HeavyKick");
         }
+        if(Input.GetButtonDown("Block"))
+            {
+                Animator.SetTrigger("BlockOn");
+            }
         }
 
-        if(Player1Layer0.IsTag("Crouching"))
+        if (Player1Layer0.IsTag("Block"))
+        {
+            if (Input.GetButtonUp("Block"))
+            {
+                Animator.SetTrigger("BlockOff");
+            }
+        }
+
+        if (Player1Layer0.IsTag("Crouching"))
         {
             if(Input.GetButtonDown("Fire3"))
             {

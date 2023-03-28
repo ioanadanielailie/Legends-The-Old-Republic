@@ -321,7 +321,7 @@ AnimatorStateMachine:
     m_Position: {x: -190, y: -170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2290338245761722631}
-    m_Position: {x: 49.921387, y: -308.05328, z: 0}
+    m_Position: {x: 60, y: -310, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -2419989626308729647}
@@ -1078,9 +1078,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.7464949
   m_TransitionOffset: 0
-  m_ExitTime: 0.79452056
+  m_ExitTime: 0.5763667
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1694,8 +1694,8 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: KnockedOut
-    m_Type: 4
+  - m_Name: KnockOut
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -1825,7 +1825,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: a048b358ddd990f4480da0c6352f317e, type: 3}
-  m_Tag: 
+  m_Tag: React
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -1889,7 +1889,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: KnockedOut
+    m_ConditionEvent: KnockOut
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2290338245761722631}
@@ -1897,9 +1897,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.29579425
+  m_TransitionOffset: 0.23892722
+  m_ExitTime: 0.9965853
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -2271,7 +2271,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 18f5d9b8edef4a84f84810ff6f85ee36, type: 3}
-  m_Tag: 
+  m_Tag: KnockedOut
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -2983,7 +2983,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 5a5c0c70796930944a82ce6e5bd1d77a, type: 3}
-  m_Tag: 
+  m_Tag: React
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -3119,7 +3119,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 90736952a8e2b444b91c0083288abfa9, type: 3}
-  m_Tag: 
+  m_Tag: React
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 

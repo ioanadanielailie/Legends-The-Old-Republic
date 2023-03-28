@@ -132,6 +132,11 @@ public class Player1Move : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Animator.SetTrigger("BigReact");
+    }
+
     IEnumerator JumpPause()
     {
         yield return new WaitForSeconds(1.0f);

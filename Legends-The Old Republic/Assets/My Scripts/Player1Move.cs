@@ -15,6 +15,11 @@ public class Player1Move : MonoBehaviour
     private Vector3 OpponentPosition;
     private bool FacingLeft=false;
     private bool FacingRight=true;
+    public AudioClip LPunch;
+    public AudioClip HPunch;
+    public AudioClip LKick;
+    public AudioClip HKick;
+    private AudioSource MyPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,7 @@ public class Player1Move : MonoBehaviour
         FacingRight = true;
        Animator=GetComponentInChildren<Animator>();
        StartCoroutine(FaceRight());
+        MyPlayer = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -134,7 +140,30 @@ public class Player1Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Animator.SetTrigger("BigReact");
+        if (other.gameObject.CompareTag("FistLight"))
+        {
+            Animator.SetTrigger("HeadReact");
+            MyPlayer.clip = LPunch;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("FistHeavy"))
+        {
+            Animator.SetTrigger("BigReact");
+            MyPlayer.clip = HPunch;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("KickHeavy"))
+        {
+            Animator.SetTrigger("BigReact");
+            MyPlayer.clip = HKick;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("KickLight"))
+        {
+            Animator.SetTrigger("HeadReact");
+            MyPlayer.clip = LKick;
+            MyPlayer.Play();
+        }
     }
 
     IEnumerator JumpPause()

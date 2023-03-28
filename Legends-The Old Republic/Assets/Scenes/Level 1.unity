@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 538557653}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: KickLight
+  m_TagString: KickHeavy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,15 +938,15 @@ AudioReverbZone:
   m_Enabled: 1
   m_MinDistance: 1
   m_MaxDistance: 10000
-  m_ReverbPreset: 1
+  m_ReverbPreset: 12
   m_Room: -1000
-  m_RoomHF: -100
-  m_DecayTime: 1.49
-  m_DecayHFRatio: 0.83
-  m_Reflections: -2602
-  m_ReflectionsDelay: 0.007
-  m_Reverb: 200
-  m_ReverbDelay: 0.011
+  m_RoomHF: -4000
+  m_DecayTime: 0.3
+  m_DecayHFRatio: 0.1
+  m_Reflections: -1831
+  m_ReflectionsDelay: 0.002
+  m_Reverb: -1630
+  m_ReverbDelay: 0.03
   m_HFReference: 5000
   m_Diffusion: 100
   m_Density: 100

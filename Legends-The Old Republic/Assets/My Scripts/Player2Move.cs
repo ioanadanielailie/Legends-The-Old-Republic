@@ -72,9 +72,9 @@ public class Player2Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
-            if(FacingRightPlayer2 == true)
+            if (FacingRightPlayer2 == true)
             {
-                if (Input.GetAxis("Horizontal") > 0)
+                if (Input.GetAxis("HorizontalPlayer2") > 0)
                 {
                     if (CharacterCanWalkRight == true)
                     {
@@ -82,7 +82,7 @@ public class Player2Move : MonoBehaviour
                         transform.Translate(CharacterWalkSpeed, 0, 0);
                     }
                 }
-                if (Input.GetAxis("Horizontal") < 0)
+                if (Input.GetAxis("HorizontalPlayer2") < 0)
                 {
                     if (CharacterCanWalkLeft == true)
                     {
@@ -91,9 +91,9 @@ public class Player2Move : MonoBehaviour
                     }
                 }
             }
-            else if(FacingLeftPlayer2 == true)
+            else if (FacingLeftPlayer2 == true)
             {
-                if (Input.GetAxis("Horizontal") > 0)
+                if (Input.GetAxis("HorizontalPlayer2") > 0)
                 {
                     if (CharacterCanWalkRight == true)
                     {
@@ -101,7 +101,7 @@ public class Player2Move : MonoBehaviour
                         transform.Translate(-CharacterWalkSpeed, 0, 0);
                     }
                 }
-                if (Input.GetAxis("Horizontal") < 0)
+                if (Input.GetAxis("HorizontalPlayer2") < 0)
                 {
                     if (CharacterCanWalkLeft == true)
                     {
@@ -111,7 +111,7 @@ public class Player2Move : MonoBehaviour
                 }
             }
         }
-        if (Input.GetAxis("Horizontal") == 0)
+        if (Input.GetAxis("HorizontalPlayer2") == 0)
         {
             Animator.SetBool("Forward", false);
             Animator.SetBool("Backward", false);
@@ -119,7 +119,7 @@ public class Player2Move : MonoBehaviour
 
 
         //Jumping and crouching
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("VerticalPlayer2") > 0)
         {
             if (IsJumping == false)
             {
@@ -128,11 +128,11 @@ public class Player2Move : MonoBehaviour
                 StartCoroutine(JumpPause());
             }
         }
-        if (Input.GetAxis("Vertical") < 0)
+        if (Input.GetAxis("VerticalPlayer2") < 0)
         {
             Animator.SetBool("Crouch",true);
         }
-        if (Input.GetAxis("Vertical") == 0)
+        if (Input.GetAxis("VerticalPlayer2") == 0)
         {
             Animator.SetBool("Crouch", false);
         }
@@ -152,12 +152,12 @@ public class Player2Move : MonoBehaviour
             MyPlayer.clip = HPunch;
             MyPlayer.Play();
         }
-        if (other.gameObject.CompareTag("KickHeavy"))
-        {
-            Animator.SetTrigger("BigReact");
-            MyPlayer.clip = HKick;
-            MyPlayer.Play();
-        }
+        //if (other.gameObject.CompareTag("KickHeavy"))
+        //{
+        //    Animator.SetTrigger("BigReact");
+        //    MyPlayer.clip = HKick;
+        //    MyPlayer.Play();
+        //}
         if (other.gameObject.CompareTag("KickLight"))
         {
             Animator.SetTrigger("HeadReact");

@@ -91,7 +91,7 @@ public class Player1Move : MonoBehaviour
                     }
                 }
             }
-            else if(FacingLeft==true)
+            else if (FacingLeft == true)
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {

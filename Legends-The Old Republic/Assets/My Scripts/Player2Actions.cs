@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player2Actions : MonoBehaviour
 {
-    public float CharacterJumpSpeed = 1.0f;
+    public float CharacterJumpSpeed = 4.0f;
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
@@ -25,13 +25,16 @@ public class Player2Actions : MonoBehaviour
     {
 
         //Heavy Punch Slide Smoothly
-        if (Player2Move.FacingRightPlayer2 == true)
+        if (HeavyMoving == true)
         {
-            Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
-        }
-        if (Player2Move.FacingLeftPlayer2 == true)
-        {
-            Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
+            if (Player2Move.FacingRightPlayer2 == true)
+            {
+                Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
+            }
+            if (Player2Move.FacingLeftPlayer2 == true)
+            {
+                Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
+            }
         }
 
 
@@ -41,23 +44,23 @@ public class Player2Actions : MonoBehaviour
         //Standing attacks
         if (Player1Layer0.IsTag("Motion"))
         { 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1Player2"))
         {
             Animator.SetTrigger("LightPunch");
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2Player2"))
         {
             Animator.SetTrigger("HeavyPunch");
         }
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Fire3Player2"))
         {
             Animator.SetTrigger("LightKick");
         }
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("JumpPlayer2"))
         {
             Animator.SetTrigger("HeavyKick");
         }
-        if(Input.GetButtonDown("Block"))
+        if(Input.GetButtonDown("BlockPlayer2"))
             {
                 Animator.SetTrigger("BlockOn");
             }
@@ -65,7 +68,7 @@ public class Player2Actions : MonoBehaviour
 
         if (Player1Layer0.IsTag("Block"))
         {
-            if (Input.GetButtonUp("Block"))
+            if (Input.GetButtonUp("BlockPlayer2"))
             {
                 Animator.SetTrigger("BlockOff");
             }
@@ -73,7 +76,7 @@ public class Player2Actions : MonoBehaviour
 
         if (Player1Layer0.IsTag("Crouching"))
         {
-            if(Input.GetButtonDown("Fire3"))
+            if(Input.GetButtonDown("Fire3Player2"))
             {
                 Animator.SetTrigger("LightKick");
             }

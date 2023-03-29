@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6c54c01f5c758429c04e0f78cbe3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterWalkSpeed: 0.006
+  CharacterWalkSpeed: 0.06
   Player1: {fileID: 1668708676}
   Opponent: {fileID: 1652965568}
   LPunch: {fileID: 8300000, guid: e70074c5f9ba7874ebb0cc6ef1350f92, type: 3}
@@ -2766,7 +2766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7786c7a9f79004287143349d1c9046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterJumpSpeed: 1
+  CharacterJumpSpeed: 4
   Player1: {fileID: 239576966}
   PunchMove: 2
   Punch: {fileID: 8300000, guid: d242248f9e848c744a575292374f2c2a, type: 3}

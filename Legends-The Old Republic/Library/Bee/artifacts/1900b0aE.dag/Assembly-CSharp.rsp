@@ -358,6 +358,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/My Scripts/Player1Actions.cs"
 "Assets/My Scripts/Player1Move.cs"
+"Assets/My Scripts/Player2Actions.cs"
+"Assets/My Scripts/Player2Move.cs"
 -langversion:9.0
 
 /deterministic

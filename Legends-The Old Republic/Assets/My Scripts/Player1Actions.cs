@@ -27,7 +27,14 @@ public class Player1Actions : MonoBehaviour
         //Heavy Punch Slide Smoothly
         if(HeavyMoving==true)
         {
-            Player1.transform.Translate(PunchMove* Time.deltaTime, 0, 0);
+            if (Player1Move.FacingRight == true)
+            {
+                Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
+            }
+            if(Player1Move.FacingLeft == true) 
+            {
+                Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
+            }
             
         }
         

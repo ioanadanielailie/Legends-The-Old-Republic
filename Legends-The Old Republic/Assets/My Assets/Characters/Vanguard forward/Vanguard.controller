@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: 0.6
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1236588854985439922}
@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: afda6309dc7d1eb49bf014d408c57ea3, type: 3}
+  m_Motion: {fileID: 7400000, guid: 55a3917cf0154984abf2cc9501fac8e2, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -239,9 +239,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.61538464
+  m_TransitionDuration: 0.14556068
+  m_TransitionOffset: 0.15238623
+  m_ExitTime: 0.8238893
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -462,7 +462,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jumping Up
-  m_Speed: 5
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7548121140885205038}
@@ -926,7 +926,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fighting Idle
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7256747258580777923}
@@ -1670,7 +1670,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jumping Up
-  m_Speed: 5
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8839857920555403011}
@@ -1684,7 +1684,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 4d4d570ea5c63a9468396516b7cc57a4, type: 3}
+  m_Motion: {fileID: 7400000, guid: 0429a0f971460644187dce64b027e23f, type: 2}
   m_Tag: Jumping
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2284,7 +2284,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fighting Idle
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6247247813299640650}
@@ -2342,7 +2342,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Running Backword Flip '
-  m_Speed: -0.6
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6762130576911657364}
@@ -2356,7 +2356,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: afda6309dc7d1eb49bf014d408c57ea3, type: 3}
+  m_Motion: {fileID: 7400000, guid: 6a75f8d7990f56443926b89c31d2a06d, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2901,7 +2901,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: 0.6
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -9334239672185159}
@@ -2915,7 +2915,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: e45e0474fa533f94b95165f5b603ccbd, type: 3}
+  m_Motion: {fileID: 7400000, guid: e7d3c190c80cf814d8d920eca70cb369, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3235,7 +3235,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Running Backword Flip '
-  m_Speed: -0.6
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6266081156111377834}
@@ -3277,7 +3277,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 358f2e74db90dd4479369c941a3553b5, type: 3}
+  m_Motion: {fileID: 7400000, guid: 302c6f87366cd5c49b34c3cdd6163eea, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3620,9 +3620,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.14556068
   m_TransitionOffset: 0
-  m_ExitTime: 0.61538464
+  m_ExitTime: 0.40800175
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -3846,7 +3846,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 2ed2cb9dceb065f47be957d86948c7a9, type: 3}
+  m_Motion: {fileID: 7400000, guid: 1b9f639950d4b9146a6b8354b1d12b3a, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 

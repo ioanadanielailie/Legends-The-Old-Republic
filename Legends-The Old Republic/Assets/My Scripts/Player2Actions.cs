@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player2Actions : MonoBehaviour
 {
     public float CharacterJumpSpeed = 4.0f;
+    public float FSpeed = 0.7f;
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
@@ -101,13 +102,13 @@ public class Player2Actions : MonoBehaviour
 
     public void FlipUp()
     {
-        Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(0.1f, 0, 0);
+        Player1.transform.Translate(0, FSpeed, 0);
+       // Player1.transform.Translate(0.1f, 0, 0);
     }
     public void FlipBack()
     {
-        Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(-0.1f, 0, 0);
+        Player1.transform.Translate(0, FSpeed, 0);
+       // Player1.transform.Translate(-0.1f, 0, 0);
     }
 
     public void MoveForHeavyPunch()

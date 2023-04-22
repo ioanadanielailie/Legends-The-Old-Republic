@@ -6,6 +6,8 @@ public class Player1Move : MonoBehaviour
 {
     private Animator Animator;
     public float CharacterWalkSpeed=0.001f;
+    public float JumpSpeed = 0.05f;
+    public float MoveSpeed;
     private bool IsJumping = false;
     private AnimatorStateInfo Player1Layer0;
     private bool CharacterCanWalkRight = true;
@@ -15,6 +17,8 @@ public class Player1Move : MonoBehaviour
     private Vector3 OpponentPosition;
     public static bool FacingLeft=false;
     public static bool FacingRight=true;
+    public static bool WalkLeftPlayer1 = true;
+    public static bool WalkRightPlayer1 = true;
     public AudioClip LPunch;
     public AudioClip HPunch;
     public AudioClip LKick;
@@ -25,6 +29,8 @@ public class Player1Move : MonoBehaviour
     {
         FacingLeft= false;
         FacingRight = true;
+        WalkLeftPlayer1= true;
+        WalkRightPlayer1= true;
        Animator=GetComponentInChildren<Animator>();
        StartCoroutine(FaceRight());
         MyPlayer = GetComponentInChildren<AudioSource>();
@@ -42,11 +48,11 @@ public class Player1Move : MonoBehaviour
         {
             CharacterCanWalkRight= false;
         }
-        if (ScreenBounds.x < 200)
+        if (ScreenBounds.x < 150)
         {
             CharacterCanWalkLeft = false;
         }
-        else if(ScreenBounds.x > 200 && ScreenBounds.x < Screen.width-150) 
+        else if(ScreenBounds.x > 150 && ScreenBounds.x < Screen.width-150) 
         {
             CharacterCanWalkRight = true;
             CharacterCanWalkLeft = true;
@@ -72,22 +78,28 @@ public class Player1Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
-            if(FacingRight == true)
+            if (FacingRight == true)
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
                     if (CharacterCanWalkRight == true)
                     {
-                        Animator.SetBool("Forward", true);
-                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                        if (WalkRightPlayer1 == true)
+                        {
+                            Animator.SetBool("Forward", true);
+                            transform.Translate(CharacterWalkSpeed, 0, 0);
+                        }
                     }
                 }
                 if (Input.GetAxis("Horizontal") < 0)
                 {
                     if (CharacterCanWalkLeft == true)
                     {
-                        Animator.SetBool("Backward", true);
-                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                        if (WalkLeftPlayer1 == true)
+                        {
+                            Animator.SetBool("Backward", true);
+                            transform.Translate(-CharacterWalkSpeed, 0, 0);
+                        }
                     }
                 }
             }
@@ -148,7 +160,7 @@ public class Player1Move : MonoBehaviour
         }
         if (other.gameObject.CompareTag("FistHeavy"))
         {
-            Animator.SetTrigger("BigReact");
+            Animator.SetTrigger("HeadReact");
             MyPlayer.clip = HPunch;
             MyPlayer.Play();
         }

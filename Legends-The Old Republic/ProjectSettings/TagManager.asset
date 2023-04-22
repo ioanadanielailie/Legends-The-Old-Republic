@@ -10,6 +10,8 @@ TagManager:
   - KickLight
   - Player1SpaceDetector
   - Player2SpaceDetector
+  - Player1Left
+  - Player1Right
   layers:
   - Default
   - TransparentFX

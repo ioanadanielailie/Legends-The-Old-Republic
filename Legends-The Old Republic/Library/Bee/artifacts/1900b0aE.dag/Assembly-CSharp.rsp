@@ -362,6 +362,7 @@
 "Assets/My Scripts/Player2Actions.cs"
 "Assets/My Scripts/Player2Jump.cs"
 "Assets/My Scripts/Player2Move.cs"
+"Assets/My Scripts/Player2MoveRestrict.cs"
 -langversion:9.0
 
 /deterministic

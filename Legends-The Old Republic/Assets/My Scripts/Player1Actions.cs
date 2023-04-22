@@ -103,12 +103,12 @@ public class Player1Actions : MonoBehaviour
     public void FlipUp()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(0.1f, 0, 0);
+        Player1.transform.Translate(0.5f, 0, 0);
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(-0.1f, 0, 0);
+        Player1.transform.Translate(-0.5f, 0, 0);
     }
 
     public void MoveForHeavyPunch()

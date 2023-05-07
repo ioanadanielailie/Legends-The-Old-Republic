@@ -15,20 +15,21 @@ public class Player1Move : MonoBehaviour
     public GameObject Player1;
     public GameObject Opponent;
     private Vector3 OpponentPosition;
-    public static bool FacingLeft=false;
-    public static bool FacingRight=true;
+    public static bool FacingLeftPlayer1=false;
+    public static bool FacingRightPlayer1=true;
     public static bool WalkLeftPlayer1 = true;
-    public static bool WalkRightPlayer1 = true;
+    public static bool WalkRightPlayer1= true;
     public AudioClip LPunch;
     public AudioClip HPunch;
     public AudioClip LKick;
     public AudioClip HKick;
     private AudioSource MyPlayer;
+    public GameObject Restrict;
     // Start is called before the first frame update
     void Start()
     {
-        FacingLeft= false;
-        FacingRight = true;
+        FacingLeftPlayer1= false;
+        FacingRightPlayer1 = true;
         WalkLeftPlayer1= true;
         WalkRightPlayer1= true;
        Animator=GetComponentInChildren<Animator>();
@@ -78,7 +79,7 @@ public class Player1Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
-            if (FacingRight == true)
+            if (FacingRightPlayer1 == true)
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
@@ -103,7 +104,7 @@ public class Player1Move : MonoBehaviour
                     }
                 }
             }
-            else if (FacingLeft == true)
+            else if (FacingLeftPlayer1 == true)
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
@@ -148,7 +149,15 @@ public class Player1Move : MonoBehaviour
         {
             Animator.SetBool("Crouch", false);
         }
+        //Resets the restrict
+        if (Restrict.gameObject.activeInHierarchy==false)
+        {
+            WalkLeftPlayer1 = true;
+            WalkRightPlayer1= true;
+        }
     }
+  
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -185,10 +194,10 @@ public class Player1Move : MonoBehaviour
     }
     IEnumerator FaceLeft() 
     {
-        if (FacingLeft == true)
+        if (FacingLeftPlayer1 == true)
         {
-            FacingLeft = false;
-            FacingRight = true;
+            FacingLeftPlayer1 = false;
+            FacingRightPlayer1 = true;
             yield return new WaitForSeconds(0.01f);
             Player1.transform.Rotate(0, -180, 0);
             Animator.SetLayerWeight(1, 0);
@@ -196,10 +205,10 @@ public class Player1Move : MonoBehaviour
     }
     IEnumerator FaceRight()
     {
-        if (FacingRight == true)
+        if (FacingRightPlayer1 == true)
         {
-            FacingRight = false;
-            FacingLeft = true;
+            FacingRightPlayer1 = false;
+            FacingLeftPlayer1 = true;
             yield return new WaitForSeconds(0.01f);
             Player1.transform.Rotate(0, 180, 0);
             Animator.SetLayerWeight(1, 1);

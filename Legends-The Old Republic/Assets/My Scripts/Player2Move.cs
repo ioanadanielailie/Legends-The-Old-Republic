@@ -17,20 +17,21 @@ public class Player2Move : MonoBehaviour
     private Vector3 OpponentPosition;
     public static bool FacingLeftPlayer2=false;
     public static bool FacingRightPlayer2=true;
-    public static bool WalkRight = true;
-    public static bool WalkLeft = true;
+    public static bool WalkRightPlayer2 = true;
+    public static bool WalkLeftPlayer2 = true;
     public AudioClip LPunch;
     public AudioClip HPunch;
     public AudioClip LKick;
     public AudioClip HKick;
     private AudioSource MyPlayer;
+    public GameObject Restrict;
     // Start is called before the first frame update
     void Start()
     {
         FacingLeftPlayer2 = false;
         FacingRightPlayer2 = true;
-        WalkLeft = true;
-        WalkRight=true;
+        WalkLeftPlayer2 = true;
+        WalkRightPlayer2=true;
         //Opponent = GameObject.Find("Player1");
         Animator=GetComponentInChildren<Animator>();
         StartCoroutine(FaceRight());
@@ -85,7 +86,7 @@ public class Player2Move : MonoBehaviour
                 {
                     if (CharacterCanWalkRight == true)
                     {
-                        if (WalkRight == true)
+                        if (WalkRightPlayer2 == true)
                         {
                             Animator.SetBool("Forward", true);
                             transform.Translate(CharacterWalkSpeed , 0, 0);
@@ -96,7 +97,7 @@ public class Player2Move : MonoBehaviour
                 {
                     if (CharacterCanWalkLeft == true)
                     {
-                        if (WalkLeft == true)
+                        if (WalkLeftPlayer2 == true)
                         {
                             Animator.SetBool("Backward", true);
                             transform.Translate(-CharacterWalkSpeed , 0, 0);
@@ -110,7 +111,7 @@ public class Player2Move : MonoBehaviour
             {
                 if (CharacterCanWalkRight == true)
                 {
-                    if (WalkRight == true)
+                    if (WalkRightPlayer2 == true)
                     {
                         //Animator.SetBool("Forward", true);
                         Animator.SetBool("Backward", true);
@@ -122,7 +123,7 @@ public class Player2Move : MonoBehaviour
             {
                 if (CharacterCanWalkLeft == true)
                 {
-                    if (WalkLeft == true)
+                    if (WalkLeftPlayer2 == true)
                     {
                         //Animator.SetBool("Backward", true);
                         Animator.SetBool("Forward", true);
@@ -156,6 +157,11 @@ public class Player2Move : MonoBehaviour
         if (Input.GetAxis("VerticalPlayer2") == 0)
         {
             Animator.SetBool("Crouch", false);
+        }
+        if (Restrict.gameObject.activeInHierarchy == false)
+        {
+            WalkLeftPlayer2 = true;
+            WalkRightPlayer2 = true;
         }
     }
 

@@ -27,11 +27,11 @@ public class Player1Actions : MonoBehaviour
         //Heavy Punch Slide Smoothly
         if(HeavyMoving==true)
         {
-            if (Player1Move.FacingRight == true)
+            if (Player1Move.FacingRightPlayer1 == true)
             {
                 Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
             }
-            if (Player1Move.FacingLeft == true)
+            if (Player1Move.FacingLeftPlayer1 == true)
             {
                 Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
             }

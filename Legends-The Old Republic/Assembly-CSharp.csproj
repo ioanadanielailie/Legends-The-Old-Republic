@@ -56,15 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\My Scripts\HealthBars.cs" />
     <Compile Include="Assets\My Scripts\Player1Jump.cs" />
     <Compile Include="Assets\My Scripts\Player1Actions.cs" />
     <Compile Include="Assets\My Scripts\Player2Move.cs" />
     <Compile Include="Assets\My Scripts\Player2Jump.cs" />
+    <Compile Include="Assets\My Scripts\SaveScript.cs" />
     <Compile Include="Assets\My Scripts\Player1Move.cs" />
     <Compile Include="Assets\My Scripts\Player2MoveRestrict.cs" />
     <Compile Include="Assets\My Scripts\Player2Actions.cs" />
-    <Compile Include="Assets\My Scripts\SaveScript.cs" />
-    <Compile Include="Assets\My Scripts\HealthBars.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\My Assets\Shadows.shader" />

@@ -135,33 +135,33 @@ public class Player2Move : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("FistLight"))
-    //    {
-    //        Animator.SetTrigger("HeadReact");
-    //        MyPlayer.clip = LPunch;
-    //        MyPlayer.Play();
-    //    }
-    //    if (other.gameObject.CompareTag("FistHeavy"))
-    //    {
-    //        Animator.SetTrigger("HeadReact");
-    //        MyPlayer.clip = HPunch;
-    //        MyPlayer.Play();
-    //    }
-    //    if (other.gameObject.CompareTag("KickHeavy"))
-    //    {
-    //        Animator.SetTrigger("BigReact");
-    //        MyPlayer.clip = HKick;
-    //        MyPlayer.Play();
-    //    }
-    //    if (other.gameObject.CompareTag("KickLight"))
-    //    {
-    //        Animator.SetTrigger("HeadReact");
-    //        MyPlayer.clip = LKick;
-    //        MyPlayer.Play();
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("FistLight"))
+        {
+            Animator.SetTrigger("HeadReact");
+            MyPlayer.clip = LPunch;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("FistHeavy"))
+        {
+            Animator.SetTrigger("HeadReact");
+            MyPlayer.clip = HPunch;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("KickHeavy"))
+        {
+            Animator.SetTrigger("BigReact");
+            MyPlayer.clip = HKick;
+            MyPlayer.Play();
+        }
+        if (other.gameObject.CompareTag("KickLight"))
+        {
+            Animator.SetTrigger("HeadReact");
+            MyPlayer.clip = LKick;
+            MyPlayer.Play();
+        }
+    }
 
     IEnumerator JumpPause()
     {

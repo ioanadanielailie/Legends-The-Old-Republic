@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1120
     height: 556
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -401,24 +401,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 241a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0afbffff305b0000425c0000
+      scrollPos: {x: 0, y: 60}
+      m_SelectedIDs: 64ecffff
+      m_LastClickedID: -5020
+      m_ExpandedIDs: 4af9ffff4ef9ffff52f9ffff56f9ffffb6f9ffffbaf9ffffbef9ffffc2f9ffffc6f9ffffcaf9ffffcef9ffffd8f9ffffdcf9ffffe0f9ffffeaf9ffffeef9fffff2f9fffff4f9ffffe6faffffeafaffffeefafffff2fafffffafafffffefaffff02fbffff06fbffff08fbffff0afbffff2e5c0000425c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Eve
-        m_OriginalName: Eve
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23618
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -686,9 +686,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.6652002, y: 0.059384584, z: -7.8473296}
+    m_Target: {x: -1.1360402, y: 0.82666075, z: -7.769274}
     speed: 2
-    m_Value: {x: -1.6652002, y: 0.059384584, z: -7.8473296}
+    m_Value: {x: -1.1360402, y: 0.82666075, z: -7.769274}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -739,9 +739,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.07000804, y: 0.10959976, z: -0.007754094, w: -0.9914771}
   m_Size:
-    m_Target: 0.20569958
+    m_Target: 1.3269373
     speed: 2
-    m_Value: 0.20569958
+    m_Value: 1.3269373
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -834,14 +834,14 @@ MonoBehaviour:
     - {fileID: 5034887269606536841, guid: e69ec5dbaec07ef46916ac75cebce6bb, type: 2}
     - {fileID: 9070326064442394912, guid: e69ec5dbaec07ef46916ac75cebce6bb, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.66129035
+    - e00: 0.46022752
       e01: 0
       e02: 0
-      e03: 140.64514
+      e03: 121.11144
       e10: 0
-      e11: 0.66129035
+      e11: 0.46022752
       e12: 0
-      e13: 307.51614
+      e13: 294.9124
       e20: 0
       e21: 0
       e22: 1
@@ -866,14 +866,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.57342654
+    - e00: 0.7160598
       e01: 0
       e02: 0
-      e03: 89.54547
+      e03: -10.861345
       e10: 0
-      e11: 0.57342654
+      e11: 0.7160598
       e12: 0
-      e13: 268.06992
+      e13: 316.05423
       e20: 0
       e21: 0
       e22: 1
@@ -979,9 +979,11 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: e69ec5dbaec07ef46916ac75cebce6bb, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: c1f29ace2a7c25b47b6ba4079641f4fb, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 5034887269606536841, guid: e69ec5dbaec07ef46916ac75cebce6bb, type: 2}
+  - m_Target: {fileID: 5034887269606536841, guid: c1f29ace2a7c25b47b6ba4079641f4fb, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: 6819015104600189332, guid: c1f29ace2a7c25b47b6ba4079641f4fb, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1035,21 +1037,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/My Scripts
+    - Assets/My Assets/Characters/Eve back attack
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/My Scripts
+  - Assets/My Assets/Characters/Eve back attack
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Daniela\Documents\GitHub\Licenta\Legends-The Old Republic
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: 7c620000
-    m_LastClickedID: 25212
+    m_SelectedIDs: 50620000
+    m_LastClickedID: 25168
     m_ExpandedIDs: 00000000386200003a6200003c6200003e62000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1106,7 +1108,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000036640000ee5f0000925e0000b2640000065f0000ee5e0000005f0000968f0000fe5e0000826000001c5f0000d05f0000245f0000e47300008c5f0000da620000f06b0000347c0000b46400007c610000fe9a00007261000070610000c4a10000748d000028630000be660000f26800004a620000526c0000
+    m_ExpandedInstanceIDs: c623000036640000ee5f0000925e0000b2640000065f0000ee5e0000005f0000968f0000fe5e0000826000001c5f0000d05f0000245f0000e47300008c5f0000da620000f06b0000347c0000b46400007c610000fe9a00007261000070610000c4a10000748d000028630000be660000f26800004a620000526c00000c6900001069000014690000186900001c69000020690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1130,7 +1132,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 133}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207

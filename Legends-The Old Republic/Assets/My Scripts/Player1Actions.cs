@@ -8,7 +8,7 @@ public class Player1Actions : MonoBehaviour
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
-    public float PunchMove = 2.0f;
+    public float PunchMove = 0.01f;
     private bool HeavyMoving=false;
     private AudioSource MyPlayerAudioSource;
     public AudioClip Punch;
@@ -33,7 +33,7 @@ public class Player1Actions : MonoBehaviour
             }
             if (Player1Move.FacingLeftPlayer1 == true)
             {
-                Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
+                Player1.transform.Translate(-PunchMove * Time.deltaTime , 0, 0);
             }
 
         }

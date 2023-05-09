@@ -80,42 +80,14 @@ public class Player2Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
-            if (FacingRightPlayer2 == true)
-            {
-                if (Input.GetAxis("HorizontalPlayer2") > 0)
-                {
-                    if (CharacterCanWalkRight == true)
-                    {
-                        if (WalkRightPlayer2 == true)
-                        {
-                            Animator.SetBool("Forward", true);
-                            transform.Translate(CharacterWalkSpeed , 0, 0);
-                        }
-                    }
-                }
-                if (Input.GetAxis("HorizontalPlayer2") < 0)
-                {
-                    if (CharacterCanWalkLeft == true)
-                    {
-                        if (WalkLeftPlayer2 == true)
-                        {
-                            Animator.SetBool("Backward", true);
-                            transform.Translate(-CharacterWalkSpeed , 0, 0);
-                        }
-                    }
-                }
-        }
-        else if (FacingLeftPlayer2 == true)
-        {
             if (Input.GetAxis("HorizontalPlayer2") > 0)
             {
                 if (CharacterCanWalkRight == true)
                 {
                     if (WalkRightPlayer2 == true)
                     {
-                        //Animator.SetBool("Forward", true);
-                        Animator.SetBool("Backward", true);
-                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                        Animator.SetBool("Forward", true);
+                        transform.Translate(CharacterWalkSpeed , 0, 0);
                     }
                 }
             }
@@ -125,14 +97,12 @@ public class Player2Move : MonoBehaviour
                 {
                     if (WalkLeftPlayer2 == true)
                     {
-                        //Animator.SetBool("Backward", true);
-                        Animator.SetBool("Forward", true);
-                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                        Animator.SetBool("Backward", true);
+                        transform.Translate(-CharacterWalkSpeed , 0, 0);
                     }
                 }
             }
         }
-    }
         if (Input.GetAxis("HorizontalPlayer2") == 0)
         {
             Animator.SetBool("Forward", false);
@@ -165,33 +135,33 @@ public class Player2Move : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("FistLight"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LPunch;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("FistHeavy"))
-        {
-            Animator.SetTrigger("BigReact");
-            MyPlayer.clip = HPunch;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickHeavy"))
-        {
-            Animator.SetTrigger("BigReact");
-            MyPlayer.clip = HKick;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickLight"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LKick;
-            MyPlayer.Play();
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("FistLight"))
+    //    {
+    //        Animator.SetTrigger("HeadReact");
+    //        MyPlayer.clip = LPunch;
+    //        MyPlayer.Play();
+    //    }
+    //    if (other.gameObject.CompareTag("FistHeavy"))
+    //    {
+    //        Animator.SetTrigger("HeadReact");
+    //        MyPlayer.clip = HPunch;
+    //        MyPlayer.Play();
+    //    }
+    //    if (other.gameObject.CompareTag("KickHeavy"))
+    //    {
+    //        Animator.SetTrigger("BigReact");
+    //        MyPlayer.clip = HKick;
+    //        MyPlayer.Play();
+    //    }
+    //    if (other.gameObject.CompareTag("KickLight"))
+    //    {
+    //        Animator.SetTrigger("HeadReact");
+    //        MyPlayer.clip = LKick;
+    //        MyPlayer.Play();
+    //    }
+    //}
 
     IEnumerator JumpPause()
     {
@@ -205,7 +175,8 @@ public class Player2Move : MonoBehaviour
             FacingLeftPlayer2 = false;
             FacingRightPlayer2 = true;
             yield return new WaitForSeconds(0.01f);
-            Player1.transform.Rotate(0, -180, 0);
+            //Player1.transform.Rotate(0, -180, 0);
+            Animator.transform.Rotate(0, -180, 0);
             Animator.SetLayerWeight(1, 0);
         }
     }
@@ -216,7 +187,8 @@ public class Player2Move : MonoBehaviour
             FacingRightPlayer2 = false;
             FacingLeftPlayer2 = true;
             yield return new WaitForSeconds(0.01f);
-            Player1.transform.Rotate(0, 180, 0);
+            //Player1.transform.Rotate(0, 180, 0);
+            Animator.transform.Rotate(0, 180, 0);
             Animator.SetLayerWeight(1, 1);
         }
     }

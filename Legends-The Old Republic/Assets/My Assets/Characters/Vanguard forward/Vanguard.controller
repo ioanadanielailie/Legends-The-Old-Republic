@@ -283,7 +283,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1177820406986457204}
-    m_Position: {x: 530, y: -60, z: 0}
+    m_Position: {x: 500, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -686089175949285960}
     m_Position: {x: 850, y: -50, z: 0}
@@ -320,7 +320,7 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -2419989626308729647}
-    m_Position: {x: 520, y: -370, z: 0}
+    m_Position: {x: 480, y: -390, z: 0}
   m_AnyStateTransitions:
   - {fileID: -7414554824348471466}
   - {fileID: 955332792143628789}
@@ -2342,7 +2342,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Running Backword Flip '
-  m_Speed: 1
+  m_Speed: -1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6762130576911657364}
@@ -2901,7 +2901,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: 1
+  m_Speed: -1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -9334239672185159}

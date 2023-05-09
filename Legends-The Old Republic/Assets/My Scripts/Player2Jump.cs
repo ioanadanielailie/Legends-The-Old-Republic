@@ -10,7 +10,15 @@ public class Player2Jump : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player1SpaceDetector"))
         {
-            Player2.transform.Translate(-0.4f, 0, 0);
+            if(Player2Move.FacingLeftPlayer2==true)
+            {
+                Player2.transform.Translate(0.8f, 0, 0);
+            }
+            if (Player2Move.FacingRightPlayer2 == true)
+            {
+                Player2.transform.Translate(-0.8f, 0, 0);
+            }
+
         }
     }
 }

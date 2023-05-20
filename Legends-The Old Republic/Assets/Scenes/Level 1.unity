@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 151369539}
   - component: {fileID: 151369541}
   - component: {fileID: 151369540}
+  - component: {fileID: 151369542}
   m_Layer: 7
   m_Name: HeadHeavy
   m_TagString: KickHeavy
@@ -236,6 +237,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151369538}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &151369542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151369538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 151369540}
 --- !u!4 &154083575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: d44f4d38f4f01224592dbda8c89b5016, type: 3}
@@ -567,6 +581,7 @@ GameObject:
   - component: {fileID: 263976978}
   - component: {fileID: 263976980}
   - component: {fileID: 263976979}
+  - component: {fileID: 263976981}
   m_Layer: 7
   m_Name: RightFootLightKick
   m_TagString: KickLight
@@ -610,6 +625,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263976977}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &263976981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263976977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 263976979}
 --- !u!1 &319492452
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +702,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 319492452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 319492454}
@@ -708,7 +736,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.042, z: 0.033}
   m_LocalScale: {x: 0.13874, y: 0.0788736, z: 0.265257}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 336309859}
   m_Father: {fileID: 1576131140}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -742,7 +771,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 324735050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 324735052}
@@ -772,13 +801,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336309858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.042, z: 0.033}
-  m_LocalScale: {x: 0.13874, y: 0.0788736, z: 0.265257}
+  m_LocalRotation: {x: 0.000000014901161, y: 0.000000037252903, z: -0.000000008381903, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1576131140}
-  m_RootOrder: 2
+  m_Father: {fileID: 324735051}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &336309860
 BoxCollider:
@@ -810,7 +839,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 336309858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 336309860}
@@ -955,6 +984,7 @@ GameObject:
   - component: {fileID: 421847862}
   - component: {fileID: 421847864}
   - component: {fileID: 421847863}
+  - component: {fileID: 421847865}
   m_Layer: 7
   m_Name: RightFootHeavyKick
   m_TagString: KickHeavy
@@ -998,6 +1028,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421847861}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &421847865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421847861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 421847863}
 --- !u!1 &459387244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459387244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 459387246}
@@ -1495,7 +1538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 650588434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 650588436}
@@ -1899,7 +1942,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 831793767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 831793769}
@@ -2450,7 +2493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022095302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1022095304}
@@ -2686,6 +2729,7 @@ GameObject:
   - component: {fileID: 1233479773}
   - component: {fileID: 1233479775}
   - component: {fileID: 1233479774}
+  - component: {fileID: 1233479776}
   m_Layer: 7
   m_Name: LeftHandLightPunch
   m_TagString: FistLight
@@ -2729,6 +2773,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233479772}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1233479776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233479772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1233479774}
 --- !u!4 &1247222993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: ab19389c0ea2e5f469044819d4126892, type: 3}
@@ -3012,6 +3069,7 @@ GameObject:
   - component: {fileID: 1380600204}
   - component: {fileID: 1380600206}
   - component: {fileID: 1380600205}
+  - component: {fileID: 1380600207}
   m_Layer: 7
   m_Name: LeftFootHeavyKick
   m_TagString: KickHeavy
@@ -3055,6 +3113,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380600203}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1380600207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380600203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1380600205}
 --- !u!1 &1381195916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,6 +4249,7 @@ GameObject:
   - component: {fileID: 1541067421}
   - component: {fileID: 1541067423}
   - component: {fileID: 1541067422}
+  - component: {fileID: 1541067424}
   m_Layer: 7
   m_Name: RightHandLightPunch
   m_TagString: FistLight
@@ -4221,6 +4293,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541067420}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1541067424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541067420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1541067422}
 --- !u!1 &1547387539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4317,7 @@ GameObject:
   - component: {fileID: 1547387540}
   - component: {fileID: 1547387542}
   - component: {fileID: 1547387541}
+  - component: {fileID: 1547387543}
   m_Layer: 7
   m_Name: LeftHandHeavyPunch
   m_TagString: FistHeavy
@@ -4275,6 +4361,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547387539}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1547387543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547387539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1547387541}
 --- !u!1001 &1576131138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5620,6 +5719,7 @@ GameObject:
   - component: {fileID: 1674087606}
   - component: {fileID: 1674087608}
   - component: {fileID: 1674087607}
+  - component: {fileID: 1674087609}
   m_Layer: 7
   m_Name: LeftFootLightKick
   m_TagString: KickLight
@@ -5663,6 +5763,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674087605}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1674087609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674087605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1674087607}
 --- !u!1 &1698011696
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,6 +5943,7 @@ GameObject:
   - component: {fileID: 1795810628}
   - component: {fileID: 1795810630}
   - component: {fileID: 1795810629}
+  - component: {fileID: 1795810631}
   m_Layer: 7
   m_Name: RightHandHeavyPunch
   m_TagString: FistHeavy
@@ -5873,6 +5987,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795810627}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1795810631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795810627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1795810629}
 --- !u!1 &1849989018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,7 +6064,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849989018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8daad8e4b4e06dc468c1c9597a11b410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1849989020}

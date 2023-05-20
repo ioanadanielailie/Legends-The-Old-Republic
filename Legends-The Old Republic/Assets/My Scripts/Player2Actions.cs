@@ -14,6 +14,7 @@ public class Player2Actions : MonoBehaviour
     private AudioSource MyPlayerAudioSource;
     public AudioClip Punch;
     public AudioClip Kick;
+    public static bool HitsPlayer2=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,19 +49,23 @@ public class Player2Actions : MonoBehaviour
             if (Input.GetButtonDown("Fire1Player2"))
         {
             Animator.SetTrigger("LightPunch");
-        }
+                HitsPlayer2 = false;
+            }
         if (Input.GetButtonDown("Fire2Player2"))
         {
             Animator.SetTrigger("HeavyPunch");
-        }
-        if (Input.GetButtonDown("Fire3Player2"))
+                HitsPlayer2 = false;
+         }
+            if (Input.GetButtonDown("Fire3Player2"))
         {
             Animator.SetTrigger("LightKick");
-        }
+                HitsPlayer2 = false;
+            }
         if (Input.GetButtonDown("JumpPlayer2"))
         {
             Animator.SetTrigger("HeavyKick");
-        }
+                HitsPlayer2 = false;
+            }
         if(Input.GetButtonDown("BlockPlayer2"))
             {
                 Animator.SetTrigger("BlockOn");
@@ -80,6 +85,7 @@ public class Player2Actions : MonoBehaviour
             if(Input.GetButtonDown("Fire3Player2"))
             {
                 Animator.SetTrigger("LightKick");
+                HitsPlayer2 = false;
             }
         }
 
@@ -89,6 +95,7 @@ public class Player2Actions : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 Animator.SetTrigger("HeavyKick");
+                HitsPlayer2 = false;
             }
         }
 

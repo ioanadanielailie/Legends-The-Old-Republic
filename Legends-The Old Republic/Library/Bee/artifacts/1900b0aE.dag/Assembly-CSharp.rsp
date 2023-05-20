@@ -362,6 +362,7 @@
 "Assets/My Scripts/Player1Jump.cs"
 "Assets/My Scripts/Player1Move.cs"
 "Assets/My Scripts/Player1MoveRestrict.cs"
+"Assets/My Scripts/Player1Trigger.cs"
 "Assets/My Scripts/Player2Actions.cs"
 "Assets/My Scripts/Player2Jump.cs"
 "Assets/My Scripts/Player2Move.cs"

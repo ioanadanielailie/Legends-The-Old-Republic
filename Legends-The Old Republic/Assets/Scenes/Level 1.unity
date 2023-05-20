@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 239576974}
   m_Layer: 0
   m_Name: Vanguard
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 319492453}
   - component: {fileID: 319492455}
   - component: {fileID: 319492454}
+  - component: {fileID: 319492456}
   m_Layer: 6
   m_Name: LeftFistHeavyPunch
   m_TagString: FistHeavy
@@ -556,6 +557,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319492452}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &319492456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319492452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 319492454}
 --- !u!1 &324735050
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +581,7 @@ GameObject:
   - component: {fileID: 324735051}
   - component: {fileID: 324735053}
   - component: {fileID: 324735052}
+  - component: {fileID: 324735054}
   m_Layer: 6
   m_Name: RightFootHeavyKick
   m_TagString: KickHeavy
@@ -610,6 +625,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324735050}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &324735054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324735050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 324735052}
 --- !u!1 &336309858
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +649,7 @@ GameObject:
   - component: {fileID: 336309859}
   - component: {fileID: 336309861}
   - component: {fileID: 336309860}
+  - component: {fileID: 336309862}
   m_Layer: 6
   m_Name: RightFootLightKick
   m_TagString: KickLight
@@ -664,6 +693,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336309858}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &336309862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336309858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 336309860}
 --- !u!1 &403414272
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +847,7 @@ GameObject:
   - component: {fileID: 459387245}
   - component: {fileID: 459387247}
   - component: {fileID: 459387246}
+  - component: {fileID: 459387248}
   m_Layer: 6
   m_Name: 'RightHandHeavyPunch '
   m_TagString: FistLight
@@ -848,6 +891,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459387244}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &459387248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459387244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 459387246}
 --- !u!1 &515700091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1280,7 @@ GameObject:
   - component: {fileID: 650588435}
   - component: {fileID: 650588437}
   - component: {fileID: 650588436}
+  - component: {fileID: 650588438}
   m_Layer: 6
   m_Name: RightHandLightPunch
   m_TagString: FistLight
@@ -1267,6 +1324,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650588434}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &650588438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650588434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 650588436}
 --- !u!1 &659033407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1684,7 @@ GameObject:
   - component: {fileID: 831793768}
   - component: {fileID: 831793770}
   - component: {fileID: 831793769}
+  - component: {fileID: 831793771}
   m_Layer: 6
   m_Name: LeftFootLightKick
   m_TagString: KickLight
@@ -1657,6 +1728,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831793767}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &831793771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831793767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 831793769}
 --- !u!1 &911738939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2235,7 @@ GameObject:
   - component: {fileID: 1022095303}
   - component: {fileID: 1022095305}
   - component: {fileID: 1022095304}
+  - component: {fileID: 1022095306}
   m_Layer: 6
   m_Name: LeftFistLightPunch
   m_TagString: FistLight
@@ -2194,6 +2279,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022095302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1022095306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022095302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1022095304}
 --- !u!1 &1024844548
 GameObject:
   m_ObjectHideFlags: 0
@@ -5124,7 +5222,7 @@ GameObject:
   - component: {fileID: 1698011697}
   m_Layer: 0
   m_Name: Eve
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5261,6 +5359,7 @@ GameObject:
   - component: {fileID: 1849989019}
   - component: {fileID: 1849989021}
   - component: {fileID: 1849989020}
+  - component: {fileID: 1849989022}
   m_Layer: 6
   m_Name: LeftFootHeavyKick
   m_TagString: KickHeavy
@@ -5304,6 +5403,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849989018}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1849989022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849989018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1849989020}
 --- !u!1 &1966374922
 GameObject:
   m_ObjectHideFlags: 0

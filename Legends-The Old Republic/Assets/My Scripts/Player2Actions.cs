@@ -10,7 +10,9 @@ public class Player2Actions : MonoBehaviour
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
     public float PunchMove = 2.0f;
+    public float HeavyReactAmt = 4f;
     private bool HeavyMoving=false;
+    public bool HeavyReact=false;
     private AudioSource MyPlayerAudioSource;
     public AudioClip Punch;
     public AudioClip Kick;
@@ -36,6 +38,19 @@ public class Player2Actions : MonoBehaviour
             if (Player2Move.FacingLeftPlayer2 == true)
             {
                 Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
+            }
+        }
+
+        //Heavy React Slide 
+        if (HeavyReact == true)
+        {
+            if (Player2Move.FacingRightPlayer2 == true)
+            {
+                Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
+            }
+            if (Player2Move.FacingLeftPlayer2 == true)
+            {
+                Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
             }
         }
 
@@ -122,6 +137,10 @@ public class Player2Actions : MonoBehaviour
     {
         StartCoroutine(PunchSlideSmoothly());
     }
+    public void HeavyReaction()
+    {
+        StartCoroutine(HeavySlide());
+    }
     public void PunchSound()
     {
         MyPlayerAudioSource.clip = Punch;
@@ -139,6 +158,13 @@ public class Player2Actions : MonoBehaviour
         HeavyMoving= true;
         yield return new WaitForSeconds(0.1f);
         HeavyMoving = false;
+
+    }
+    IEnumerator HeavySlide()
+    {
+        HeavyReact = true;
+        yield return new WaitForSeconds(0.3f);
+        HeavyReact = false;
 
     }
 }

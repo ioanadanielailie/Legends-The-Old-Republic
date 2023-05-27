@@ -49,8 +49,12 @@ public class Player1Move : MonoBehaviour
         {
             Animator.SetTrigger("KnockedOut");
             //Player1.GetComponent<Player2Actions>().enabled = false;
-            // this.GetComponent<Player1Move>().enabled = false;
             StartCoroutine(KnockedOut());
+        }
+        if(SaveScript.Player2Health <= 0)
+        {
+            Animator.SetTrigger("Victory");
+            this.GetComponent<Player1Move>().enabled = false;
         }
 
         //Listen to the Animator

@@ -7,9 +7,9 @@ public class Player1Trigger : MonoBehaviour
     public Collider Col;
     public float DamageAmt = 0.1f;
 
-    public bool EmitFX = false;
-    public ParticleSystem Particles;
-    public float PauseSpeed = 0.6f;
+    public bool EmitFXP1 = false;
+    public ParticleSystem ParticlesP1;
+    public float PauseSpeedP1 = 0.6f;
 
     // Update is called once per frame
     void Update()
@@ -28,10 +28,10 @@ public class Player1Trigger : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player2"))
         {
-            if(EmitFX==true)
+            if(EmitFXP1==true)
             {
-                Particles.Play();
-                Time.timeScale= PauseSpeed;
+                ParticlesP1.Play();
+                Time.timeScale= PauseSpeedP1;
             }
             Player1Actions.Hits = true;
             SaveScript.Player2Health -= DamageAmt;

@@ -107,6 +107,7 @@ public class Player2Move : MonoBehaviour
         //Walking left and right
         if (Player1Layer0.IsTag("Motion"))
         {
+            Time.timeScale = 1.0f;
             if (Input.GetAxis("HorizontalPlayer2") > 0)
             {
                 if (CharacterCanWalkRight == true)

@@ -558,6 +558,9 @@ MonoBehaviour:
   LKick: {fileID: 8300000, guid: 245f43ecb2b9ec7478aa4d812f748f5b, type: 3}
   HKick: {fileID: 8300000, guid: 03ce63f8ca0bd554ab0cd46e1cf40b71, type: 3}
   Restrict: {fileID: 157678422}
+  RB: {fileID: 239576968}
+  BoxCollider: {fileID: 239576974}
+  CapsuleCollider: {fileID: 239576969}
 --- !u!65 &239576974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5947,6 +5950,9 @@ MonoBehaviour:
   LKick: {fileID: 8300000, guid: 245f43ecb2b9ec7478aa4d812f748f5b, type: 3}
   HKick: {fileID: 8300000, guid: 03ce63f8ca0bd554ab0cd46e1cf40b71, type: 3}
   Restrict: {fileID: 1225392071}
+  RB: {fileID: 1698011698}
+  BoxCollider: {fileID: 1698011703}
+  CapsuleCollider: {fileID: 1698011699}
 --- !u!54 &1698011698
 Rigidbody:
   m_ObjectHideFlags: 0

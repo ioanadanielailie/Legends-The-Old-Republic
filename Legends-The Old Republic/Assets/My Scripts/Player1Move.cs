@@ -25,6 +25,10 @@ public class Player1Move : MonoBehaviour
     public AudioClip HKick;
     private AudioSource MyPlayer;
     public GameObject Restrict;
+    public Rigidbody RB;
+    public Collider BoxCollider;
+    public Collider CapsuleCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -141,6 +145,19 @@ public class Player1Move : MonoBehaviour
         {
             WalkLeftPlayer1 = true;
             WalkRightPlayer1= true;
+        }
+        if (Player1Layer0.IsTag("Block"))
+        {
+            RB.isKinematic= true;
+            BoxCollider.enabled= false;
+            CapsuleCollider.enabled= false;
+        }
+        else
+        {
+            RB.isKinematic = false;
+            BoxCollider.enabled = true;
+            CapsuleCollider.enabled = true;
+
         }
     }
   

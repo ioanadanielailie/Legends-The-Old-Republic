@@ -57,28 +57,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\My Scripts\HealthBars.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\My Scripts\Player1Jump.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\My Scripts\Player2Trigger.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\My Scripts\Player1Actions.cs" />
     <Compile Include="Assets\My Scripts\Player1Trigger.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\My Scripts\Player2Move.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\My Scripts\Player2Jump.cs" />
     <Compile Include="Assets\My Scripts\SaveScript.cs" />
     <Compile Include="Assets\My Scripts\Player1MoveRestrict.cs" />
     <Compile Include="Assets\My Scripts\Player1Move.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\My Scripts\Player2MoveRestrict.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\My Scripts\Player2Actions.cs" />
     <Compile Include="Assets\My Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
@@ -760,11 +760,11 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
@@ -808,9 +808,17 @@
       <Project>{D458399A-4BDE-AE75-3573-18F27AC0BFCE}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{3BA550D3-D766-333E-08B6-8A7BF2A7401A}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
       <Project>{5124EDC7-B6E1-E927-14EE-EDAFC662A873}</Project>
       <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{AC8B1EB5-55CE-0820-01DC-B4B5FB415C14}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{0640422E-0C0E-3005-0686-7B75F60B1B63}</Project>
@@ -819,14 +827,6 @@
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{4E3B0ECD-3197-3B80-45D7-17225C5A334B}</Project>
       <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{3BA550D3-D766-333E-08B6-8A7BF2A7401A}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{AC8B1EB5-55CE-0820-01DC-B4B5FB415C14}</Project>
-      <Name>CFXRDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

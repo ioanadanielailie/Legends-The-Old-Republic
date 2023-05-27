@@ -9,6 +9,7 @@ public class Player1Trigger : MonoBehaviour
 
     public bool EmitFX = false;
     public ParticleSystem Particles;
+    public float PauseSpeed = 0.6f;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +31,7 @@ public class Player1Trigger : MonoBehaviour
             if(EmitFX==true)
             {
                 Particles.Play();
+                Time.timeScale= PauseSpeed;
             }
             Player1Actions.Hits = true;
             SaveScript.Player2Health -= DamageAmt;

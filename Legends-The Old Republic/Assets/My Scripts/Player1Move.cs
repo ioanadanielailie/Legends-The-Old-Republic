@@ -29,6 +29,7 @@ public class Player1Move : MonoBehaviour
     public Collider BoxCollider;
     public Collider CapsuleCollider;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +40,20 @@ public class Player1Move : MonoBehaviour
        Animator=GetComponentInChildren<Animator>();
        StartCoroutine(FaceRight());
         MyPlayer = GetComponentInChildren<AudioSource>();
+        MoveSpeed = CharacterWalkSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Player1Actions.FlyingJumpP1 ==true)
+        {
+            CharacterWalkSpeed = JumpSpeed;
+        }
+        else
+        {
+            CharacterWalkSpeed = MoveSpeed;
+        }
         //Check if we are knocked out
         if (SaveScript.Player1Health <= 0)
         {

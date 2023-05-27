@@ -16,6 +16,9 @@ public class Player1Actions : MonoBehaviour
     public AudioClip Kick;
     public static bool Hits=false;
     public bool HeavyReact = false;
+    public static bool FlyingJumpP1 = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -124,12 +127,18 @@ public class Player1Actions : MonoBehaviour
     public void FlipUp()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(1.2f, 0, 0);
+        FlyingJumpP1=true;
+ 
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(-1.2f, 0, 0);
+        FlyingJumpP1 = true;
+    }
+
+    public void IdleSpeed()
+    {
+        FlyingJumpP1 = false;
     }
 
     public void MoveForHeavyPunch()

@@ -5943,7 +5943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterWalkSpeed: 0.005
-  JumpSpeed: 0.05
+  JumpSpeed: 0.026
   MoveSpeed: 0
   Player1: {fileID: 1698011696}
   Opponent: {fileID: 1668708676}

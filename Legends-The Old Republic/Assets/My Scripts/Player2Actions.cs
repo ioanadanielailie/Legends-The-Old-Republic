@@ -119,18 +119,18 @@ public class Player2Actions : MonoBehaviour
     }
      public void JumpUp()
     {
-        Player1.transform.Translate( 0, CharacterJumpSpeed* Time.deltaTime, 0);
+        Player1.transform.Translate( 0, CharacterJumpSpeed, 0);
     }
 
     public void FlipUp()
     {
         Player1.transform.Translate(0, FSpeed, 0);
-        Player1.transform.Translate(0.1f, 0, 0);
+        Player1.transform.Translate(1.1f, 0, 0);
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, FSpeed, 0);
-        Player1.transform.Translate(-0.1f, 0, 0);
+        Player1.transform.Translate(-1.1f, 0, 0);
     }
 
     public void MoveForHeavyPunch()

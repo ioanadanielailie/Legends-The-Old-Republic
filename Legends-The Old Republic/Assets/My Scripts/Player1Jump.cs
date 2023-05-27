@@ -13,11 +13,11 @@ public class Player1Jump : MonoBehaviour
         {
             if (Player1Move.FacingRightPlayer1 == true)
             {
-                Player1.transform.Translate(-0.8f, 0, 0);
+                Player1.transform.Translate(-1.0f, 0, 0);
             }
             if (Player1Move.FacingLeftPlayer1 == true)
             {
-                Player1.transform.Translate(0.8f, 0, 0);
+                Player1.transform.Translate(1.0f, 0, 0);
             }
         }
 

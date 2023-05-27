@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 122419265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.887, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.038505, y: 0.55935, z: 0.71773}
+  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1698011702}
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 151369540}
+  DamageAmt: 0.1
 --- !u!4 &154083575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: d44f4d38f4f01224592dbda8c89b5016, type: 3}
@@ -638,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 263976979}
+  DamageAmt: 0.1
 --- !u!1 &319492452
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 319492454}
+  DamageAmt: 0.05
 --- !u!1 &324735050
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 324735052}
+  DamageAmt: 0.2
 --- !u!1 &336309858
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 336309860}
+  DamageAmt: 0.1
 --- !u!1 &403414272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 421847863}
+  DamageAmt: 0.4
 --- !u!1 &459387244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 459387246}
+  DamageAmt: 0.1
 --- !u!1 &515700091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 650588436}
+  DamageAmt: 0.1
 --- !u!1 &659033407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1859,7 @@ Transform:
   m_GameObject: {fileID: 823351320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.069, y: -0.623, z: 0}
-  m_LocalScale: {x: 0.12855, y: 0.7089, z: 0.81407}
+  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 239576972}
@@ -1946,6 +1954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 831793769}
+  DamageAmt: 0.1
 --- !u!1 &911738939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +1982,7 @@ Transform:
   m_GameObject: {fileID: 911738939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.772, y: -0.623, z: 0}
-  m_LocalScale: {x: 0.12855, y: 0.7089, z: 0.81407}
+  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 239576972}
@@ -2121,6 +2130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1Green: {fileID: 403414274}
   Player2Green: {fileID: 1024844550}
+  Player1Red: {fileID: 1305890589}
+  Player2Red: {fileID: 173338241}
 --- !u!114 &949521964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2497,6 +2508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1022095304}
+  DamageAmt: 0.05
 --- !u!1 &1024844548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,6 +2852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1233479774}
+  DamageAmt: 0.1
 --- !u!1 &1237970811
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,6 +3247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1380600205}
+  DamageAmt: 0.4
 --- !u!1 &1381195916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,7 +4333,7 @@ Transform:
   m_GameObject: {fileID: 1416371747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.653, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.038505, y: 0.55935, z: 0.71773}
+  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1698011702}
@@ -4414,6 +4428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1541067422}
+  DamageAmt: 0.1
 --- !u!1 &1547387539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,6 +4497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1547387541}
+  DamageAmt: 0.1
 --- !u!1001 &1576131138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5571,7 +5587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d971c7e175e6be845befb6d709e16c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterJumpSpeed: 0.2
+  CharacterJumpSpeed: 0.32
   Player1: {fileID: 1698011696}
   PunchMove: 3
   Punch: {fileID: 8300000, guid: d242248f9e848c744a575292374f2c2a, type: 3}
@@ -5886,6 +5902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1674087607}
+  DamageAmt: 0.1
 --- !u!1 &1698011696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,6 +6127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1795810629}
+  DamageAmt: 0.1
 --- !u!1 &1849989018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6178,6 +6196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1849989020}
+  DamageAmt: 0.2
 --- !u!1 &1966374922
 GameObject:
   m_ObjectHideFlags: 0

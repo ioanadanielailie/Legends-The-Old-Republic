@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player1Actions : MonoBehaviour
 {
-    public float CharacterJumpSpeed = 1.0f;
+    public float CharacterJumpSpeed = 0.8f;
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;
@@ -30,7 +30,7 @@ public class Player1Actions : MonoBehaviour
         {
             if (Player1Move.FacingRightPlayer1 == true)
             {
-                Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
+                Player1.transform.Translate(PunchMove * Time.deltaTime , 0, 0);
             }
             if (Player1Move.FacingLeftPlayer1 == true)
             {
@@ -110,12 +110,12 @@ public class Player1Actions : MonoBehaviour
     public void FlipUp()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(0.5f, 0, 0);
+        Player1.transform.Translate(1.2f, 0, 0);
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, CharacterJumpSpeed, 0);
-        Player1.transform.Translate(-0.5f, 0, 0);
+        Player1.transform.Translate(-1.2f, 0, 0);
     }
 
     public void MoveForHeavyPunch()

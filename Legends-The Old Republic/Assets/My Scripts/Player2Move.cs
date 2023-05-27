@@ -174,7 +174,7 @@ public class Player2Move : MonoBehaviour
         {
             FacingLeftPlayer2 = false;
             FacingRightPlayer2 = true;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.15f);
             //Player1.transform.Rotate(0, -180, 0);
             Animator.transform.Rotate(0, -180, 0);
             Animator.SetLayerWeight(1, 0);
@@ -186,7 +186,7 @@ public class Player2Move : MonoBehaviour
         {
             FacingRightPlayer2 = false;
             FacingLeftPlayer2 = true;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.15f);
             //Player1.transform.Rotate(0, 180, 0);
             Animator.transform.Rotate(0, 180, 0);
             Animator.SetLayerWeight(1, 1);

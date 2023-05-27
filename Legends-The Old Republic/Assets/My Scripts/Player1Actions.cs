@@ -10,10 +10,12 @@ public class Player1Actions : MonoBehaviour
     private AnimatorStateInfo Player1Layer0;
     public float PunchMove = 0.01f;
     private bool HeavyMoving=false;
+    public float HeavyReactAmt = 4f;
     private AudioSource MyPlayerAudioSource;
     public AudioClip Punch;
     public AudioClip Kick;
     public static bool Hits=false;
+    public bool HeavyReact = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,19 @@ public class Player1Actions : MonoBehaviour
             }
 
         }
-        
+        //Heavy React Slide 
+        if (HeavyReact == true)
+        {
+            if (Player1Move.FacingRightPlayer1 == true)
+            {
+                Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
+            }
+            if (Player1Move.FacingLeftPlayer1 == true)
+            {
+                Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
+            }
+        }
+
 
         //Listen to the animator
         Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
@@ -122,6 +136,10 @@ public class Player1Actions : MonoBehaviour
     {
         StartCoroutine(PunchSlideSmoothly());
     }
+    public void HeavyReaction()
+    {
+        StartCoroutine(HeavySlide());
+    }
     public void PunchSound()
     {
         MyPlayerAudioSource.clip = Punch;
@@ -139,6 +157,13 @@ public class Player1Actions : MonoBehaviour
         HeavyMoving= true;
         yield return new WaitForSeconds(0.1f);
         HeavyMoving = false;
+
+    }
+    IEnumerator HeavySlide()
+    {
+        HeavyReact = true;
+        yield return new WaitForSeconds(0.3f);
+        HeavyReact = false;
 
     }
 }

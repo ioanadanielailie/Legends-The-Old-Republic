@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player2Actions : MonoBehaviour
 {
     public float CharacterJumpSpeed = 4.0f;
-    public float FSpeed = 0.7f;
+    public float FSpeed = 0.4f;
     public GameObject Player1;
     private Animator Animator;
     private AnimatorStateInfo Player1Layer0;

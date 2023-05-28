@@ -1977,10 +1977,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eve
       objectReference: {fileID: 0}
-    - target: {fileID: 2820769208405896591, guid: 7c06e590211a13a44a82db8a11453c70, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c06e590211a13a44a82db8a11453c70, type: 3}
 --- !u!1001 &8986304674446563367
@@ -1993,10 +1989,6 @@ PrefabInstance:
     - target: {fileID: 8986304674342010785, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
       propertyPath: m_Name
       value: Vanguard
-      objectReference: {fileID: 0}
-    - target: {fileID: 8986304674342010785, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8986304674342010795, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
       propertyPath: m_RootOrder

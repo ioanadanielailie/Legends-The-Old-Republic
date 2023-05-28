@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1236588854985439922}
@@ -466,7 +466,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jumping Up
-  m_Speed: 1.3
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7548121140885205038}
@@ -1626,7 +1626,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Walk Back
-  m_Speed: -1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4755513782810726678}
@@ -1721,7 +1721,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jumping Up
-  m_Speed: 1.3
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8839857920555403011}
@@ -2399,7 +2399,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Running Backword Flip '
-  m_Speed: -1
+  m_Speed: -0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6762130576911657364}
@@ -2920,7 +2920,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ' Walk Forword'
-  m_Speed: 1
+  m_Speed: -1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2465870124093255719}
@@ -2980,7 +2980,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: -1
+  m_Speed: -0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -9334239672185159}
@@ -3120,7 +3120,7 @@ AnimatorStateMachine:
     m_Position: {x: 910, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7445982764790392433}
-    m_Position: {x: 590, y: -200, z: 0}
+    m_Position: {x: 600, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5430757120441833002}
     m_Position: {x: 600, y: -60, z: 0}
@@ -3318,7 +3318,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Running Backword Flip '
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6266081156111377834}
@@ -3332,7 +3332,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: e45e0474fa533f94b95165f5b603ccbd, type: 3}
+  m_Motion: {fileID: 7400000, guid: 5792b3562dd34b048a3db62b8a4f9054, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 

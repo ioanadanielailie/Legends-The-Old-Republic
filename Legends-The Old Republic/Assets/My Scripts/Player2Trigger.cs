@@ -8,8 +8,17 @@ public class Player2Trigger : MonoBehaviour
     public float DamageAmt = 0.1f;
 
     public bool EmitFXP2 = false;
-    public ParticleSystem ParticlesP2;
+    private ParticleSystem ParticlesP2;
     public float PauseSpeedP2 = 0.6f;
+    public string ParticleType = "P11";
+
+    private GameObject ChosenParticles;
+
+    private void Start()
+    {
+        ChosenParticles = GameObject.Find(ParticleType);
+        ParticlesP2 = ChosenParticles.gameObject.GetComponent<ParticleSystem>();
+    }
 
     // Update is called once per frame
     void Update()

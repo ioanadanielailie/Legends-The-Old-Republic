@@ -31,6 +31,7 @@ public class Player2Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Opponent = GameObject.Find("Player1");
         FacingLeftPlayer2 = false;
         FacingRightPlayer2 = true;
         WalkLeftPlayer2 = true;

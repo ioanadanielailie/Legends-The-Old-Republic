@@ -36,7 +36,6 @@ public class Player2Move : MonoBehaviour
         FacingRightPlayer2 = true;
         WalkLeftPlayer2 = true;
         WalkRightPlayer2=true;
-        //Opponent = GameObject.Find("Player1");
         Animator=GetComponentInChildren<Animator>();
         StartCoroutine(FaceRight());
         MyPlayer = GetComponentInChildren<AudioSource>();
@@ -59,14 +58,15 @@ public class Player2Move : MonoBehaviour
         //Check if we are knocked out
         if (SaveScript.Player2Health<=0)
         {
-            Animator.SetTrigger("KnockOut");
-            //Player1.GetComponent<Player2Actions>().enabled = false;
+            Animator.SetTrigger("KnockedOut");
+            Player1.GetComponent<Player2Actions>().enabled = false;
              StartCoroutine(KnockedOut());
         }
 
         if (SaveScript.Player1Health <= 0)
         {
             Animator.SetTrigger("Victory");
+            Player1.GetComponent<Player2Actions>().enabled = false;
             this.GetComponent<Player2Move>().enabled = false;
         }
         //Listen to the Animator

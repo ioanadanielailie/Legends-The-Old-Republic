@@ -12,6 +12,8 @@ public class Player2Trigger : MonoBehaviour
     public float PauseSpeedP2 = 0.6f;
     public string ParticleType = "P11";
 
+    public bool Player2 = true;
+
     private GameObject ChosenParticles;
 
     private void Start()
@@ -23,30 +25,65 @@ public class Player2Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player2Actions.HitsPlayer2==false)
+        if (Player2 == true)
         {
-            Col.enabled = true;
+            if (Player2Actions.HitsPlayer2 == false)
+            {
+                Col.enabled = true;
+            }
+            else
+            {
+                Col.enabled = false;
+            }
         }
         else
         {
-            Col.enabled = false;
+            if(Player1Actions.Hits==false) 
+            {
+                Col.enabled = true;
+            }
+            else
+            {
+                Col.enabled = false;
+
+            }
         }
         
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player1"))
+        if (Player2 == true)
         {
-            if (EmitFXP2 == true)
+            if (other.gameObject.CompareTag("Player1"))
             {
-                ParticlesP2.Play();
-                Time.timeScale = PauseSpeedP2;
+                if (EmitFXP2 == true)
+                {
+                    ParticlesP2.Play();
+                    Time.timeScale = PauseSpeedP2;
+                }
+                Player2Actions.HitsPlayer2 = true;
+                SaveScript.Player1Health -= DamageAmt;
+                if (SaveScript.Player1Timer < 2.0f)
+                {
+                    SaveScript.Player1Timer += 2.0f;
+                }
             }
-            Player2Actions.HitsPlayer2 = true;
-            SaveScript.Player1Health -= DamageAmt;
-            if (SaveScript.Player1Timer < 2.0f)
+        }
+        else if (Player2 == false) 
+        {
+            if (other.gameObject.CompareTag("Player2"))
             {
-                SaveScript.Player1Timer += 2.0f;
+                if (EmitFXP2 == true)
+                {
+                    ParticlesP2.Play();
+                    Time.timeScale = PauseSpeedP2;
+                }
+                Player1Actions.Hits = true;
+                SaveScript.Player2Health -= DamageAmt;
+                if (SaveScript.Player2Timer < 2.0f)
+                {
+                    SaveScript.Player2Timer += 2.0f;
+                }
             }
         }
     }

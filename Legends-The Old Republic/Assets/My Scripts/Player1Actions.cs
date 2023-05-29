@@ -154,6 +154,10 @@ public class Player1Actions : MonoBehaviour
         MyPlayerAudioSource.clip = Punch;
         MyPlayerAudioSource.Play();
     }
+    public void RandomAttack()
+    {
+
+    }
     public void KickSound()
     {
         MyPlayerAudioSource.clip = Kick;

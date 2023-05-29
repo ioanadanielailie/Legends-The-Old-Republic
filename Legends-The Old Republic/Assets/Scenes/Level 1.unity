@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EveP1
       objectReference: {fileID: 0}
+    - target: {fileID: 4202983482422846854, guid: 78be354bdcdc20f47a62a6a9027a4346, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78be354bdcdc20f47a62a6a9027a4346, type: 3}
 --- !u!1 &403414272
@@ -62705,6 +62709,10 @@ PrefabInstance:
     - target: {fileID: 8986304674342010785, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
       propertyPath: m_Name
       value: Vanguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986304674342010785, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8986304674342010795, guid: 58cdfe5a1ecc0f9429f2480ef73e41b7, type: 3}
       propertyPath: m_RootOrder

@@ -33,6 +33,7 @@ public class Player2MoveAI : MonoBehaviour
     public float AttackDistance = 1.5f;
     private bool MoveAI = true;
     public static bool AttackState = false;
+    public int Defend = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -181,46 +182,6 @@ public class Player2MoveAI : MonoBehaviour
                 }
             }
         }
-
-
-
-        /*
-
-                //Walking left and right
-                if (Player1Layer0.IsTag("Motion"))
-                {
-                    Time.timeScale = 1.0f;
-                    if (Input.GetAxis("HorizontalPlayer2") > 0)
-                    {
-                        if (CharacterCanWalkRight == true)
-                        {
-                            if (WalkRightAI == true)
-                            {
-                                Animator.SetBool("Forward", true);
-                                transform.Translate(CharacterWalkSpeed , 0, 0);
-                            }
-                        }
-                    }
-                    if (Input.GetAxis("HorizontalPlayer2") < 0)
-                    {
-                        if (CharacterCanWalkLeft == true)
-                        {
-                            if (WalkLeftAI == true)
-                            {
-                                Animator.SetBool("Backward", true);
-                                transform.Translate(-CharacterWalkSpeed , 0, 0);
-                            }
-                        }
-                    }
-                }
-                if (Input.GetAxis("HorizontalPlayer2") == 0)
-                {
-                    Animator.SetBool("Forward", false);
-                    Animator.SetBool("Backward", false);
-                }
-        */
-
-
         //Jumping and crouching
         if (Input.GetAxis("VerticalPlayer2") > 0)
         {
@@ -231,13 +192,10 @@ public class Player2MoveAI : MonoBehaviour
                 StartCoroutine(JumpPause());
             }
         }
-        if (Input.GetAxis("VerticalPlayer2") < 0)
+        if (Defend==3)
         {
             Animator.SetBool("Crouch",true);
-        }
-        if (Input.GetAxis("VerticalPlayer2") == 0)
-        {
-            Animator.SetBool("Crouch", false);
+            Defend= 0;
         }
         //Resets the restrict
         if (Restrict.gameObject.activeInHierarchy == false)
@@ -269,6 +227,7 @@ public class Player2MoveAI : MonoBehaviour
             Animator.SetTrigger("HeadReact");
             MyPlayer.clip = LPunch;
             MyPlayer.Play();
+            Defend = Random.Range(0, 5);
         }
         if (other.gameObject.CompareTag("FistHeavy"))
         {
@@ -287,6 +246,8 @@ public class Player2MoveAI : MonoBehaviour
             Animator.SetTrigger("HeadReact");
             MyPlayer.clip = LKick;
             MyPlayer.Play();
+            Defend = Random.Range(0, 5);
+
         }
     }
 

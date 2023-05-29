@@ -77,21 +77,25 @@ public class Player2ActionsAI : MonoBehaviour
                 {
                     Animator.SetTrigger("LightPunch");
                     HitsAI = false;
+                    StartCoroutine(SetAttacking());
                 }
                 if (AttackNumber == 2)
                 {
                     Animator.SetTrigger("HeavyPunch");
                     HitsAI = false;
+                    StartCoroutine(SetAttacking());
                 }
                 if (AttackNumber == 3)
                 {
                     Animator.SetTrigger("LightKick");
                     HitsAI = false;
+                    StartCoroutine(SetAttacking());
                 }
                 if (AttackNumber == 4)
                 {
                     Animator.SetTrigger("HeavyKick");
                     HitsAI = false;
+                    StartCoroutine(SetAttacking());
                 }
                 if (Input.GetButtonDown("BlockPlayer2"))
                 {
@@ -108,13 +112,12 @@ public class Player2ActionsAI : MonoBehaviour
             }
         }
 
+        //Crouching attack
         if (Player1Layer0.IsTag("Crouching"))
         {
-            if(Input.GetButtonDown("Fire3Player2"))
-            {
                 Animator.SetTrigger("LightKick");
                 HitsAI = false;
-            }
+                Animator.SetBool("Crouch", false);
         }
 
         //Aerial moves

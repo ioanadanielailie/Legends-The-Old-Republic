@@ -69,6 +69,8 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\My Scripts\Player2Move.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\My Scripts\Player2ActionsAI.cs" />
+    <Compile Include="Assets\My Scripts\Player2MoveAI.cs" />
     <Compile Include="Assets\My Scripts\Player2Jump.cs" />
     <Compile Include="Assets\My Scripts\SaveScript.cs" />
     <Compile Include="Assets\My Scripts\Player1MoveRestrict.cs" />
@@ -80,8 +82,6 @@
     <Compile Include="Assets\My Scripts\MenuButtons.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\My Scripts\Player2MoveAI.cs" />
-    <Compile Include="Assets\My Scripts\Player2ActionsAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />

@@ -106,15 +106,32 @@ public class Player2MoveAI : MonoBehaviour
             if (Player1Layer0.IsTag("Motion"))
             {
                 Time.timeScale = 1.0f;
-                if (OppDistance> AttackDistance)
+                if (OppDistance > AttackDistance)
                 {
-                    if (CharacterCanWalkRight == true)
+                    if (MoveAI == true)
                     {
-                        if (WalkRightAI == true)
+                        if (CharacterCanWalkRight == true)
                         {
-                            Animator.SetBool("Forward", true);
+                            if (WalkRightAI == true)
+                            {
+                                Animator.SetBool("Forward", true);
+                                Animator.SetBool("Backward", false);
+                                AttackState = false;
+                                transform.Translate(CharacterWalkSpeed, 0, 0);
+                            }
+                        }
+                    }
+                }
+                if(OppDistance< AttackDistance)
+                {
+                    if(CharacterCanWalkRight==true)
+                    {
+                        if(MoveAI==true)
+                        {
+                            MoveAI= false;
+                            Animator.SetBool("Forward", false);
                             Animator.SetBool("Backward", false);
-                            transform.Translate(CharacterWalkSpeed, 0, 0);
+                            StartCoroutine(ForwardFalse());
                         }
                     }
                 }
@@ -128,13 +145,30 @@ public class Player2MoveAI : MonoBehaviour
                 Time.timeScale = 1.0f;
                 if (OppDistance > AttackDistance)
                 {
+                    if (MoveAI == true)
+                    {
+                        if (CharacterCanWalkLeft == true)
+                        {
+                            if (WalkLeftAI == true)
+                            {
+                                Animator.SetBool("Backward", true);
+                                Animator.SetBool("Forward", false);
+                                AttackState = false;
+                                transform.Translate(-CharacterWalkSpeed, 0, 0);
+                            }
+                        }
+                    }
+                }
+                if (OppDistance < AttackDistance)
+                {
                     if (CharacterCanWalkLeft == true)
                     {
-                        if (WalkLeftAI == true)
+                        if (MoveAI == true)
                         {
-                            Animator.SetBool("Backward", true);
+                            MoveAI = false;
                             Animator.SetBool("Forward", false);
-                            transform.Translate(-CharacterWalkSpeed, 0, 0);
+                            Animator.SetBool("Backward", false);
+                            StartCoroutine(ForwardFalse());
                         }
                     }
                 }
@@ -282,5 +316,11 @@ public class Player2MoveAI : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         this.GetComponent<Player2Move>().enabled = false;
+    }
+
+    IEnumerator ForwardFalse()
+    {
+        yield return new WaitForSeconds(0.6f);
+        MoveAI= true;
     }
 }

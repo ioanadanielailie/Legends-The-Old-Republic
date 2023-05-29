@@ -34,6 +34,7 @@ public class Player2MoveAI : MonoBehaviour
     private bool MoveAI = true;
     public static bool AttackState = false;
     public int Defend = 0;
+    private bool IsBlocking=false;
 
     // Start is called before the first frame update
     void Start()
@@ -197,6 +198,20 @@ public class Player2MoveAI : MonoBehaviour
             Animator.SetBool("Crouch",true);
             Defend= 0;
         }
+        if(Defend==2)
+        {
+            if(IsBlocking== false)
+            {
+                IsBlocking = true;
+                Animator.SetTrigger("BlockOn");
+                StartCoroutine(EndBlock());
+            }
+        }
+        if (Defend==4)
+        {
+            Animator.SetTrigger("Jump");
+            Defend= 0;
+        }
         //Resets the restrict
         if (Restrict.gameObject.activeInHierarchy == false)
         {
@@ -290,5 +305,12 @@ public class Player2MoveAI : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);
         MoveAI= true;
+    }
+    IEnumerator EndBlock()
+    {
+        yield return new WaitForSeconds(2.0f);
+        IsBlocking= false;
+        Animator.SetTrigger("BlockOff");
+        Defend = 0;
     }
 }

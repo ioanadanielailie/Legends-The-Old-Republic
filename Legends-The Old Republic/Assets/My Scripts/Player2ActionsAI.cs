@@ -20,6 +20,8 @@ public class Player2ActionsAI : MonoBehaviour
     public static bool FlyingJumpAI = false;
 
     private int AttackNumber = 1;
+    private bool Attacking = true;
+    public float AttackRate = 1.0f;
 
 
     // Start is called before the first frame update
@@ -65,30 +67,34 @@ public class Player2ActionsAI : MonoBehaviour
 
         //Standing attacks
         if (Player1Layer0.IsTag("Motion"))
-        { 
-            if (AttackNumber == 1 )
         {
-            Animator.SetTrigger("LightPunch");
-                HitsAI = false;
-            }
-        if (AttackNumber == 2)
+            if (Attacking == true)
             {
-            Animator.SetTrigger("HeavyPunch");
-                HitsAI = false;
-         }
-            if (AttackNumber == 3)
-            {
-            Animator.SetTrigger("LightKick");
-                HitsAI = false;
-            }
-        if (AttackNumber == 4)
-            {
-            Animator.SetTrigger("HeavyKick");
-                HitsAI = false;
-            }
-        if(Input.GetButtonDown("BlockPlayer2"))
-            {
-                Animator.SetTrigger("BlockOn");
+                Attacking= false;
+                if (AttackNumber == 1)
+                {
+                    Animator.SetTrigger("LightPunch");
+                    HitsAI = false;
+                }
+                if (AttackNumber == 2)
+                {
+                    Animator.SetTrigger("HeavyPunch");
+                    HitsAI = false;
+                }
+                if (AttackNumber == 3)
+                {
+                    Animator.SetTrigger("LightKick");
+                    HitsAI = false;
+                }
+                if (AttackNumber == 4)
+                {
+                    Animator.SetTrigger("HeavyKick");
+                    HitsAI = false;
+                }
+                if (Input.GetButtonDown("BlockPlayer2"))
+                {
+                    Animator.SetTrigger("BlockOn");
+                }
             }
         }
 
@@ -164,12 +170,8 @@ public class Player2ActionsAI : MonoBehaviour
 
     public void RandomAttack()
     {
-        //if(Player2MoveAI.AttackState==true)
-        //{
-            AttackNumber = Random.Range(1, 5);
-        //}
-
-    }
+        AttackNumber = Random.Range(1, 5);
+        StartCoroutine(SetAttacking());    }
 
 
     IEnumerator PunchSlideSmoothly() 
@@ -184,6 +186,12 @@ public class Player2ActionsAI : MonoBehaviour
         HeavyReact = true;
         yield return new WaitForSeconds(0.3f);
         HeavyReact = false;
+
+    }
+    IEnumerator SetAttacking()
+    {
+        yield return new WaitForSeconds(AttackRate);
+        Attacking = true;
 
     }
 }

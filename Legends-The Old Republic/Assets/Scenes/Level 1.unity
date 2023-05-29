@@ -32554,6 +32554,7 @@ MonoBehaviour:
   HeavyReact: 0
   Punch: {fileID: 8300000, guid: d242248f9e848c744a575292374f2c2a, type: 3}
   Kick: {fileID: 8300000, guid: c4e2360c969e95f48ad47d7cb4b6723a, type: 3}
+  AttackRate: 4
 --- !u!1 &5195792579232231333
 GameObject:
   m_ObjectHideFlags: 0
@@ -52662,7 +52663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 6340206182740323177}
-  DamageAmt: 0.1
+  DamageAmt: 0.3
   EmitFXP2: 1
   ParticlesP2: {fileID: 0}
   PauseSpeedP2: 0.3

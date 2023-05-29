@@ -2068,7 +2068,7 @@ GameObject:
   - component: {fileID: 8910431866097884346}
   - component: {fileID: 2543883220324582575}
   - component: {fileID: 7446159096923125108}
-  - component: {fileID: 5427617394449421549}
+  - component: {fileID: 8910431866097884347}
   m_Layer: 7
   m_Name: RightHandLightPunch
   m_TagString: FistLight
@@ -6914,24 +6914,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &848437942645459863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3983953969293803571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1912179884227834188}
-  DamageAmt: 0.4
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P11
-  Player2: 1
 --- !u!1 &869254788484155716
 GameObject:
   m_ObjectHideFlags: 0
@@ -7084,24 +7066,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1224922632272059761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8125057599720277523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 8711468237311048732}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P14
-  Player2: 1
 --- !u!4 &1288756568791788388
 Transform:
   m_ObjectHideFlags: 0
@@ -7136,24 +7100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1355126033286329501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8035839214356191350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 2612000862220532063}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P14
-  Player2: 1
 --- !u!4 &1381408180061367553
 Transform:
   m_ObjectHideFlags: 0
@@ -11844,7 +11790,7 @@ GameObject:
   - component: {fileID: 2862824534518583488}
   - component: {fileID: 6557306116093521017}
   - component: {fileID: 1774509278755406042}
-  - component: {fileID: 2030232128085071442}
+  - component: {fileID: 6557306116093521018}
   m_Layer: 7
   m_Name: LeftHandLightPunch
   m_TagString: FistLight
@@ -16782,24 +16728,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1913036861646377794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551046093866060689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 8038760986720104711}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P14
-  Player2: 1
 --- !u!1 &1914819986607190944
 GameObject:
   m_ObjectHideFlags: 0
@@ -16831,24 +16759,6 @@ Transform:
   m_Father: {fileID: 4601144831435157994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2030232128085071442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500049730763649213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1774509278755406042}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P12
-  Player2: 1
 --- !u!4 &2076795971344938278
 Transform:
   m_ObjectHideFlags: 0
@@ -17297,7 +17207,7 @@ GameObject:
   - component: {fileID: 4905652802587749112}
   - component: {fileID: 5023040259802538535}
   - component: {fileID: 6991875192016007957}
-  - component: {fileID: 8013022844952669214}
+  - component: {fileID: 6991875192016007958}
   m_Layer: 7
   m_Name: RightFootHeavyKick
   m_TagString: KickHeavy
@@ -22764,7 +22674,7 @@ GameObject:
   - component: {fileID: 8827926580883441699}
   - component: {fileID: 4703869903107331477}
   - component: {fileID: 1912179884227834188}
-  - component: {fileID: 848437942645459863}
+  - component: {fileID: 8827926580883441700}
   m_Layer: 7
   m_Name: LeftFootHeavyKick
   m_TagString: KickHeavy
@@ -32755,24 +32665,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5427617394449421549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211236238777879549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 7446159096923125108}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P12
-  Player2: 1
 --- !u!198 &5473642275439473308
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -37812,7 +37704,7 @@ GameObject:
   - component: {fileID: 7238556559898192107}
   - component: {fileID: 343841172768597890}
   - component: {fileID: 2225461787998716132}
-  - component: {fileID: 7081980009076107552}
+  - component: {fileID: 7238556559898192108}
   m_Layer: 7
   m_Name: LeftFootLightKick
   m_TagString: KickLight
@@ -42696,6 +42588,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500049730763649213}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6557306116093521018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500049730763649213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1774509278755406042}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P12
+  Player2: 1
 --- !u!199 &6565621661748564286
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -42949,6 +42860,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6991875192016007958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708841565400691412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 6991875192016007957}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P13
+  Player2: 1
 --- !u!4 &7002902875670365554
 Transform:
   m_ObjectHideFlags: 0
@@ -43038,24 +42968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7081980009076107552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061136963853033853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 2225461787998716132}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P13
-  Player2: 1
 --- !u!4 &7090899263350189771
 Transform:
   m_ObjectHideFlags: 0
@@ -43131,6 +43043,25 @@ Transform:
   m_Father: {fileID: 5000126049460020526}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7238556559898192108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6061136963853033853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 2225461787998716132}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P13
+  Player2: 1
 --- !u!198 &7251412430781189735
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -52699,24 +52630,6 @@ Transform:
   m_Father: {fileID: 1665677841898923439}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7688635403604985285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737353494039875712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 6340206182740323177}
-  DamageAmt: 0.1
-  EmitFXP2: 1
-  PauseSpeedP2: 0.3
-  ParticleType: P11
-  Player2: 1
 --- !u!1 &7737353494039875712
 GameObject:
   m_ObjectHideFlags: 0
@@ -52728,7 +52641,7 @@ GameObject:
   - component: {fileID: 1288756568791788388}
   - component: {fileID: 5719750616667371338}
   - component: {fileID: 6340206182740323177}
-  - component: {fileID: 7688635403604985285}
+  - component: {fileID: 7737353494039875713}
   m_Layer: 7
   m_Name: HeadHeavy
   m_TagString: KickHeavy
@@ -52736,6 +52649,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7737353494039875713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737353494039875712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 6340206182740323177}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.3
+  ParticleType: P11
+  Player2: 1
 --- !u!4 &7775647358833663963
 Transform:
   m_ObjectHideFlags: 0
@@ -57524,24 +57456,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8013022844952669214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708841565400691412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0ee0ff34bf9164298bb6987a6ccc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 6991875192016007957}
-  DamageAmt: 0.4
-  EmitFXP2: 1
-  PauseSpeedP2: 0.6
-  ParticleType: P13
-  Player2: 1
 --- !u!1 &8035839214356191350
 GameObject:
   m_ObjectHideFlags: 0
@@ -57553,7 +57467,7 @@ GameObject:
   - component: {fileID: 182907091975335504}
   - component: {fileID: 9181445455782142491}
   - component: {fileID: 2612000862220532063}
-  - component: {fileID: 1355126033286329501}
+  - component: {fileID: 9181445455782142492}
   m_Layer: 7
   m_Name: RightHandHeavyPunch
   m_TagString: FistHeavy
@@ -57600,7 +57514,7 @@ GameObject:
   - component: {fileID: 2080758388468969061}
   - component: {fileID: 5497127768843363015}
   - component: {fileID: 8711468237311048732}
-  - component: {fileID: 1224922632272059761}
+  - component: {fileID: 8711468237311048733}
   m_Layer: 7
   m_Name: LeftHandHeavyPunch
   m_TagString: FistHeavy
@@ -62399,7 +62313,7 @@ GameObject:
   - component: {fileID: 5664402303438807972}
   - component: {fileID: 6410639348291357022}
   - component: {fileID: 8038760986720104711}
-  - component: {fileID: 1913036861646377794}
+  - component: {fileID: 8551046093866060690}
   m_Layer: 7
   m_Name: RightFootLightKick
   m_TagString: KickLight
@@ -62407,6 +62321,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &8551046093866060690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8551046093866060689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 8038760986720104711}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P14
+  Player2: 1
 --- !u!4 &8557063230253458695
 Transform:
   m_ObjectHideFlags: 0
@@ -62579,6 +62512,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8711468237311048733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125057599720277523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 8711468237311048732}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P14
+  Player2: 1
 --- !u!4 &8740385985843002903
 Transform:
   m_ObjectHideFlags: 0
@@ -62658,6 +62610,25 @@ Transform:
   m_Father: {fileID: 5000126049460020526}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8827926580883441700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983953969293803571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1912179884227834188}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P11
+  Player2: 1
 --- !u!1 &8897408167942394094
 GameObject:
   m_ObjectHideFlags: 0
@@ -62689,6 +62660,25 @@ Transform:
   m_Father: {fileID: 687906154772668338}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8910431866097884347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211236238777879549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 7446159096923125108}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P12
+  Player2: 1
 --- !u!1 &8959288759502039889
 GameObject:
   m_ObjectHideFlags: 0
@@ -67538,3 +67528,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035839214356191350}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &9181445455782142492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8035839214356191350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0307826f234fbc8418e1acff35dfc6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 2612000862220532063}
+  DamageAmt: 0.1
+  EmitFXP2: 1
+  ParticlesP2: {fileID: 0}
+  PauseSpeedP2: 0.6
+  ParticleType: P14
+  Player2: 1

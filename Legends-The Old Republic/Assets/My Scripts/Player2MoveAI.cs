@@ -67,15 +67,15 @@ public class Player2MoveAI : MonoBehaviour
         if (SaveScript.Player2Health<=0)
         {
             Animator.SetTrigger("KnockOut");
-            Player1.GetComponent<Player2Actions>().enabled = false;
+            Player1.GetComponent<Player2ActionsAI>().enabled = false;
              StartCoroutine(KnockedOut());
         }
 
         if (SaveScript.Player1Health <= 0)
         {
             Animator.SetTrigger("Victory");
-            Player1.GetComponent<Player2Actions>().enabled = false;
-            this.GetComponent<Player2Move>().enabled = false;
+            Player1.GetComponent<Player2ActionsAI>().enabled = false;
+            this.GetComponent<Player2MoveAI>().enabled = false;
         }
         //Listen to the Animator
         Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
@@ -319,7 +319,7 @@ public class Player2MoveAI : MonoBehaviour
     IEnumerator KnockedOut()
     {
         yield return new WaitForSeconds(0.1f);
-        this.GetComponent<Player2Move>().enabled = false;
+        this.GetComponent<Player2MoveAI>().enabled = false;
     }
 
     IEnumerator ForwardFalse()

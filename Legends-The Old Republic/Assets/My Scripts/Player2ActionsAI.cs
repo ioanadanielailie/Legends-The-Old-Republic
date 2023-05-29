@@ -16,8 +16,10 @@ public class Player2ActionsAI : MonoBehaviour
     private AudioSource MyPlayerAudioSource;
     public AudioClip Punch;
     public AudioClip Kick;
-    public static bool HitsPlayer2=false;
-    public static bool FlyingJumpP2 = false;
+    public static bool HitsAI=false;
+    public static bool FlyingJumpAI = false;
+
+    private int AttackNumber = 1;
 
 
     // Start is called before the first frame update
@@ -34,11 +36,11 @@ public class Player2ActionsAI : MonoBehaviour
         //Heavy Punch Slide Smoothly
         if (HeavyMoving == true)
         {
-            if (Player2Move.FacingRightPlayer2 == true)
+            if (Player2MoveAI.FacingRightAI == true)
             {
                 Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
             }
-            if (Player2Move.FacingLeftPlayer2 == true)
+            if (Player2MoveAI.FacingLeftAI == true)
             {
                 Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
             }
@@ -47,11 +49,11 @@ public class Player2ActionsAI : MonoBehaviour
         //Heavy React Slide 
         if (HeavyReact == true)
         {
-            if (Player2Move.FacingRightPlayer2 == true)
+            if (Player2MoveAI.FacingRightAI == true)
             {
                 Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
             }
-            if (Player2Move.FacingLeftPlayer2 == true)
+            if (Player2MoveAI.FacingLeftAI == true)
             {
                 Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
             }
@@ -64,25 +66,25 @@ public class Player2ActionsAI : MonoBehaviour
         //Standing attacks
         if (Player1Layer0.IsTag("Motion"))
         { 
-            if (Input.GetButtonDown("Fire1Player2"))
+            if (AttackNumber == 1 )
         {
             Animator.SetTrigger("LightPunch");
-                HitsPlayer2 = false;
+                HitsAI = false;
             }
-        if (Input.GetButtonDown("Fire2Player2"))
-        {
+        if (AttackNumber == 2)
+            {
             Animator.SetTrigger("HeavyPunch");
-                HitsPlayer2 = false;
+                HitsAI = false;
          }
-            if (Input.GetButtonDown("Fire3Player2"))
-        {
+            if (AttackNumber == 3)
+            {
             Animator.SetTrigger("LightKick");
-                HitsPlayer2 = false;
+                HitsAI = false;
             }
-        if (Input.GetButtonDown("JumpPlayer2"))
-        {
+        if (AttackNumber == 4)
+            {
             Animator.SetTrigger("HeavyKick");
-                HitsPlayer2 = false;
+                HitsAI = false;
             }
         if(Input.GetButtonDown("BlockPlayer2"))
             {
@@ -103,7 +105,7 @@ public class Player2ActionsAI : MonoBehaviour
             if(Input.GetButtonDown("Fire3Player2"))
             {
                 Animator.SetTrigger("LightKick");
-                HitsPlayer2 = false;
+                HitsAI = false;
             }
         }
 
@@ -113,7 +115,7 @@ public class Player2ActionsAI : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 Animator.SetTrigger("HeavyKick");
-                HitsPlayer2 = false;
+                HitsAI = false;
             }
         }
 
@@ -128,17 +130,17 @@ public class Player2ActionsAI : MonoBehaviour
     public void FlipUp()
     {
         Player1.transform.Translate(0, FSpeed, 0);
-        FlyingJumpP2 = true;
+        FlyingJumpAI = true;
     }
     public void FlipBack()
     {
         Player1.transform.Translate(0, FSpeed, 0);
-        FlyingJumpP2 = true;
+        FlyingJumpAI = true;
     }
 
     public void IdleSpeed()
     {
-        FlyingJumpP2 = false;
+        FlyingJumpAI = false;
     }
 
     public void MoveForHeavyPunch()
@@ -158,6 +160,15 @@ public class Player2ActionsAI : MonoBehaviour
     {
         MyPlayerAudioSource.clip = Kick;
         MyPlayerAudioSource.Play();
+    }
+
+    public void RandomAttack()
+    {
+        //if(Player2MoveAI.AttackState==true)
+        //{
+            AttackNumber = Random.Range(1, 5);
+        //}
+
     }
 
 

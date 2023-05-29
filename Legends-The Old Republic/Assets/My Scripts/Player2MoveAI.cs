@@ -106,6 +106,7 @@ public class Player2MoveAI : MonoBehaviour
             if (Player1Layer0.IsTag("Motion"))
             {
                 Time.timeScale = 1.0f;
+                Animator.SetBool("CanAttack", false);
                 if (OppDistance > AttackDistance)
                 {
                     if (MoveAI == true)
@@ -131,6 +132,7 @@ public class Player2MoveAI : MonoBehaviour
                             MoveAI= false;
                             Animator.SetBool("Forward", false);
                             Animator.SetBool("Backward", false);
+                            Animator.SetBool("CanAttack", true);
                             StartCoroutine(ForwardFalse());
                         }
                     }
@@ -143,6 +145,7 @@ public class Player2MoveAI : MonoBehaviour
             if (Player1Layer0.IsTag("Motion"))
             {
                 Time.timeScale = 1.0f;
+                Animator.SetBool("CanAttack", false);
                 if (OppDistance > AttackDistance)
                 {
                     if (MoveAI == true)
@@ -168,6 +171,7 @@ public class Player2MoveAI : MonoBehaviour
                             MoveAI = false;
                             Animator.SetBool("Forward", false);
                             Animator.SetBool("Backward", false);
+                            Animator.SetBool("CanAttack", true);
                             StartCoroutine(ForwardFalse());
                         }
                     }

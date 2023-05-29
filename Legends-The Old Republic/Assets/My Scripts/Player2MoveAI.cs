@@ -100,79 +100,82 @@ public class Player2MoveAI : MonoBehaviour
         OpponentPosition=Opponent.transform.position;
 
         //Facing left or right of the Opponent
-        if (OpponentPosition.x > Player1.transform.position.x)
+        if (Player2ActionsAI.Dazed == false)
         {
-            StartCoroutine(FaceLeft());
-            if (Player1Layer0.IsTag("Motion"))
+            if (OpponentPosition.x > Player1.transform.position.x)
             {
-                Time.timeScale = 1.0f;
-                Animator.SetBool("CanAttack", false);
-                if (OppDistance > AttackDistance)
+                StartCoroutine(FaceLeft());
+                if (Player1Layer0.IsTag("Motion"))
                 {
-                    if (MoveAI == true)
+                    Time.timeScale = 1.0f;
+                    Animator.SetBool("CanAttack", false);
+                    if (OppDistance > AttackDistance)
                     {
-                        if (CharacterCanWalkRight == true)
+                        if (MoveAI == true)
                         {
-                            if (WalkRightAI == true)
+                            if (CharacterCanWalkRight == true)
                             {
-                                Animator.SetBool("Forward", true);
-                                Animator.SetBool("Backward", false);
-                                AttackState = false;
-                                transform.Translate(CharacterWalkSpeed, 0, 0);
+                                if (WalkRightAI == true)
+                                {
+                                    Animator.SetBool("Forward", true);
+                                    Animator.SetBool("Backward", false);
+                                    AttackState = false;
+                                    transform.Translate(CharacterWalkSpeed, 0, 0);
+                                }
                             }
                         }
                     }
-                }
-                if(OppDistance< AttackDistance)
-                {
-                    if(CharacterCanWalkRight==true)
+                    if (OppDistance < AttackDistance)
                     {
-                        if(MoveAI==true)
+                        if (CharacterCanWalkRight == true)
                         {
-                            MoveAI= false;
-                            Animator.SetBool("Forward", false);
-                            Animator.SetBool("Backward", false);
-                            Animator.SetBool("CanAttack", true);
-                            StartCoroutine(ForwardFalse());
+                            if (MoveAI == true)
+                            {
+                                MoveAI = false;
+                                Animator.SetBool("Forward", false);
+                                Animator.SetBool("Backward", false);
+                                Animator.SetBool("CanAttack", true);
+                                StartCoroutine(ForwardFalse());
+                            }
                         }
                     }
                 }
             }
-        }
-        if (OpponentPosition.x < Player1.transform.position.x)
-        {
-            StartCoroutine(FaceRight());
-            if (Player1Layer0.IsTag("Motion"))
+            if (OpponentPosition.x < Player1.transform.position.x)
             {
-                Time.timeScale = 1.0f;
-                Animator.SetBool("CanAttack", false);
-                if (OppDistance > AttackDistance)
+                StartCoroutine(FaceRight());
+                if (Player1Layer0.IsTag("Motion"))
                 {
-                    if (MoveAI == true)
-                    {
-                        if (CharacterCanWalkLeft == true)
-                        {
-                            if (WalkLeftAI == true)
-                            {
-                                Animator.SetBool("Backward", true);
-                                Animator.SetBool("Forward", false);
-                                AttackState = false;
-                                transform.Translate(-CharacterWalkSpeed, 0, 0);
-                            }
-                        }
-                    }
-                }
-                if (OppDistance < AttackDistance)
-                {
-                    if (CharacterCanWalkLeft == true)
+                    Time.timeScale = 1.0f;
+                    Animator.SetBool("CanAttack", false);
+                    if (OppDistance > AttackDistance)
                     {
                         if (MoveAI == true)
                         {
-                            MoveAI = false;
-                            Animator.SetBool("Forward", false);
-                            Animator.SetBool("Backward", false);
-                            Animator.SetBool("CanAttack", true);
-                            StartCoroutine(ForwardFalse());
+                            if (CharacterCanWalkLeft == true)
+                            {
+                                if (WalkLeftAI == true)
+                                {
+                                    Animator.SetBool("Backward", true);
+                                    Animator.SetBool("Forward", false);
+                                    AttackState = false;
+                                    transform.Translate(-CharacterWalkSpeed, 0, 0);
+                                }
+                            }
+                        }
+                    }
+                    if (OppDistance < AttackDistance)
+                    {
+                        if (CharacterCanWalkLeft == true)
+                        {
+                            if (MoveAI == true)
+                            {
+                                MoveAI = false;
+                                Animator.SetBool("Forward", false);
+                                Animator.SetBool("Backward", false);
+                                Animator.SetBool("CanAttack", true);
+                                StartCoroutine(ForwardFalse());
+                            }
                         }
                     }
                 }

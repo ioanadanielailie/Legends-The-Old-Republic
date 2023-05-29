@@ -18,10 +18,12 @@ public class Player2ActionsAI : MonoBehaviour
     public AudioClip Kick;
     public static bool HitsAI=false;
     public static bool FlyingJumpAI = false;
+    public static bool Dazed=false;
 
     private int AttackNumber = 1;
     private bool Attacking = true;
     public float AttackRate = 1.0f;
+    public float DazedTime = 3.0f;
 
 
     // Start is called before the first frame update
@@ -184,8 +186,11 @@ public class Player2ActionsAI : MonoBehaviour
     IEnumerator HeavySlide()
     {
         HeavyReact = true;
+        Dazed = true;
         yield return new WaitForSeconds(0.3f);
         HeavyReact = false;
+        yield return new WaitForSeconds(DazedTime);
+        Dazed = false;
 
     }
     IEnumerator SetAttacking()

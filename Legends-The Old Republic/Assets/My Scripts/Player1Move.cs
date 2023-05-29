@@ -28,6 +28,8 @@ public class Player1Move : MonoBehaviour
     public Rigidbody RB;
     public Collider BoxCollider;
     public Collider CapsuleCollider;
+    private float Timer = 2.0f;
+    private float CrouchTime = 0.0f;
 
 
     // Start is called before the first frame update
@@ -151,11 +153,22 @@ public class Player1Move : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") < 0)
         {
-            Animator.SetBool("Crouch",true);
+            if (CrouchTime < Timer)
+            {
+                CrouchTime += 1.0f * Time.deltaTime;
+                Animator.SetBool("Crouch", true);
+            }
+            else if (CrouchTime > Timer)
+            {
+                Animator.SetBool("Crouch", false);
+                StartCoroutine(ResetCrouchTime());
+
+            }
         }
         if (Input.GetAxis("Vertical") == 0)
         {
             Animator.SetBool("Crouch", false);
+            CrouchTime= 0;
         }
         //Resets the restrict
         if (Restrict.gameObject.activeInHierarchy==false)
@@ -169,12 +182,20 @@ public class Player1Move : MonoBehaviour
             BoxCollider.enabled= false;
             CapsuleCollider.enabled= false;
         }
-        else
+        else if(Player1Layer0.IsTag("Motion"))
         {
             RB.isKinematic = false;
             BoxCollider.enabled = true;
             CapsuleCollider.enabled = true;
 
+        }
+        if(Player1Layer0.IsTag("Crouching"))
+        {
+            BoxCollider.enabled = false;
+        }
+        if (Player1Layer0.IsTag("Sweep"))
+        {
+            BoxCollider.enabled = false;
         }
     }
   
@@ -241,5 +262,11 @@ public class Player1Move : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         this.GetComponent<Player1Move>().enabled= false;
+    }
+    IEnumerator ResetCrouchTime() 
+    {
+        yield return new WaitForSeconds(2.0f);
+        CrouchTime= 0.0f;
+
     }
 }

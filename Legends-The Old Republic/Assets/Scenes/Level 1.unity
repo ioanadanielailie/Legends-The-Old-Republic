@@ -316,10 +316,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EveP1
       objectReference: {fileID: 0}
-    - target: {fileID: 4202983482422846854, guid: 78be354bdcdc20f47a62a6a9027a4346, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78be354bdcdc20f47a62a6a9027a4346, type: 3}
 --- !u!1 &403414272
@@ -32555,6 +32551,7 @@ MonoBehaviour:
   Punch: {fileID: 8300000, guid: d242248f9e848c744a575292374f2c2a, type: 3}
   Kick: {fileID: 8300000, guid: c4e2360c969e95f48ad47d7cb4b6723a, type: 3}
   AttackRate: 4
+  DazedTime: 3
 --- !u!1 &5195792579232231333
 GameObject:
   m_ObjectHideFlags: 0
@@ -42755,7 +42752,7 @@ Transform:
   m_GameObject: {fileID: 5789616529093208263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.772, y: -0.623, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3513043362288641318}
@@ -47924,7 +47921,7 @@ Transform:
   m_GameObject: {fileID: 8150684712677432318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.069, y: -0.623, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3513043362288641318}
@@ -62428,6 +62425,7 @@ MonoBehaviour:
   BoxCollider: {fileID: 8655900615868375635}
   CapsuleCollider: {fileID: 8655900615868375635}
   AttackDistance: 0.8
+  Defend: 0
 --- !u!199 &8669855376907187217
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -9782,6 +9782,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P24
 --- !u!1 &1696992572519861004
 GameObject:
@@ -9810,7 +9811,7 @@ Transform:
   m_GameObject: {fileID: 1696992572519861004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.653, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3066811814224995138}
@@ -15151,6 +15152,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P21
 --- !u!1 &3318716071691009993
 GameObject:
@@ -24931,6 +24933,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P24
 --- !u!1 &4063897366847477414
 GameObject:
@@ -25456,6 +25459,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P23
 --- !u!1 &4841051180077463257
 GameObject:
@@ -26063,6 +26067,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P24
 --- !u!1 &6292844633351292019
 GameObject:
@@ -31027,7 +31032,7 @@ Transform:
   m_GameObject: {fileID: 6336707462350486898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.887, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.1, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3066811814224995138}
@@ -45670,6 +45675,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P22
 --- !u!1 &7074555692181035282
 GameObject:
@@ -50324,6 +50330,7 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P22
 --- !u!1 &7400061977708541196
 GameObject:
@@ -65214,4 +65221,5 @@ MonoBehaviour:
   EmitFXP1: 1
   ParticlesP1: {fileID: 0}
   PauseSpeedP1: 0.6
+  Player1: 1
   ParticleType: P21

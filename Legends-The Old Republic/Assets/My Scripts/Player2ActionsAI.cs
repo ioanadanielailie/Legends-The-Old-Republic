@@ -161,6 +161,7 @@ public class Player2ActionsAI : MonoBehaviour
     public void HeavyReaction()
     {
         StartCoroutine(HeavySlide());
+        AttackNumber = 3;
     }
     public void PunchSound()
     {

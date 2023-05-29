@@ -60,7 +60,7 @@ public class Player1Move : MonoBehaviour
         //Check if we are knocked out
         if (SaveScript.Player1Health <= 0)
         {
-            Animator.SetTrigger("KnockOut");
+            Animator.SetTrigger("KnockedOut");
             Player1.GetComponent<Player1Actions>().enabled = false;
             StartCoroutine(KnockedOut());
         }

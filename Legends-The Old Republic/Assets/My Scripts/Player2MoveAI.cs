@@ -68,7 +68,7 @@ public class Player2MoveAI : MonoBehaviour
         //Check if we are knocked out
         if (SaveScript.Player2Health<=0)
         {
-            Animator.SetTrigger("KnockOut");
+            Animator.SetTrigger("KnockedOut");
             Player1.GetComponent<Player2ActionsAI>().enabled = false;
              StartCoroutine(KnockedOut());
         }
@@ -226,12 +226,20 @@ public class Player2MoveAI : MonoBehaviour
             BoxCollider.enabled = false;
             CapsuleCollider.enabled = false;
         }
-        else
+        else if (Player1Layer0.IsTag("Motion"))
         {
             RB.isKinematic = false;
             BoxCollider.enabled = true;
             CapsuleCollider.enabled = true;
 
+        }
+        if (Player1Layer0.IsTag("Crouching"))
+        {
+            BoxCollider.enabled = false;
+        }
+        if (Player1Layer0.IsTag("Sweep"))
+        {
+            BoxCollider.enabled = false;
         }
     }
 

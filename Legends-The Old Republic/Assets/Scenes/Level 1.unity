@@ -1215,6 +1215,8 @@ MonoBehaviour:
   Player2Green: {fileID: 1024844550}
   Player1Red: {fileID: 1305890589}
   Player2Red: {fileID: 173338241}
+  TimerText: {fileID: 1091226331}
+  LevelTime: 90
 --- !u!114 &949521964
 MonoBehaviour:
   m_ObjectHideFlags: 0

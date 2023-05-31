@@ -15,6 +15,7 @@ public class HealthBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SaveScript.TimeOut = false;
         
     }
 
@@ -25,6 +26,10 @@ public class HealthBars : MonoBehaviour
         if (LevelTime > 00)
         {
             LevelTime -= 1 * Time.deltaTime;
+        }
+        if(LevelTime <= 0.9)
+        {
+            SaveScript.TimeOut = true;
         }
         TimerText.text =Mathf.Round(LevelTime).ToString();
         Player1Green.fillAmount = SaveScript.Player1Health;

@@ -36,102 +36,101 @@ public class Player2ActionsAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Heavy Punch Slide Smoothly
-        if (HeavyMoving == true)
+        if (SaveScript.TimeOut == false)
         {
-            if (Player2MoveAI.FacingRightAI == true)
+            //Heavy Punch Slide Smoothly
+            if (HeavyMoving == true)
             {
-                Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
-            }
-            if (Player2MoveAI.FacingLeftAI == true)
-            {
-                Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
-            }
-        }
-
-        //Heavy React Slide 
-        if (HeavyReact == true)
-        {
-            if (Player2MoveAI.FacingRightAI == true)
-            {
-                Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
-            }
-            if (Player2MoveAI.FacingLeftAI == true)
-            {
-                Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
-            }
-        }
-
-
-        //Listen to the animator
-        Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
-
-        //Standing attacks
-        if (Player1Layer0.IsTag("Motion"))
-        {
-            if (Attacking == true)
-            {
-                Attacking= false;
-                if (AttackNumber == 1)
+                if (Player2MoveAI.FacingRightAI == true)
                 {
-                    Animator.SetTrigger("LightPunch");
-                    HitsAI = false;
-                    StartCoroutine(SetAttacking());
+                    Player1.transform.Translate(PunchMove * Time.deltaTime, 0, 0);
                 }
-                if (AttackNumber == 2)
+                if (Player2MoveAI.FacingLeftAI == true)
                 {
-                    Animator.SetTrigger("HeavyPunch");
-                    HitsAI = false;
-                    StartCoroutine(SetAttacking());
-                }
-                if (AttackNumber == 3)
-                {
-                    Animator.SetTrigger("LightKick");
-                    HitsAI = false;
-                    StartCoroutine(SetAttacking());
-                }
-                if (AttackNumber == 4)
-                {
-                    Animator.SetTrigger("HeavyKick");
-                    HitsAI = false;
-                    StartCoroutine(SetAttacking());
-                }
-                if (Input.GetButtonDown("BlockPlayer2"))
-                {
-                    Animator.SetTrigger("BlockOn");
+                    Player1.transform.Translate(-PunchMove * Time.deltaTime, 0, 0);
                 }
             }
-        }
 
-        if (Player1Layer0.IsTag("Block"))
-        {
-            if (Input.GetButtonUp("BlockPlayer2"))
+            //Heavy React Slide 
+            if (HeavyReact == true)
             {
-                Animator.SetTrigger("BlockOff");
+                if (Player2MoveAI.FacingRightAI == true)
+                {
+                    Player1.transform.Translate(-HeavyReactAmt * Time.deltaTime, 0, 0);
+                }
+                if (Player2MoveAI.FacingLeftAI == true)
+                {
+                    Player1.transform.Translate(HeavyReactAmt * Time.deltaTime, 0, 0);
+                }
             }
-        }
 
-        //Crouching attack
-        if (Player1Layer0.IsTag("Crouching"))
-        {
+
+            //Listen to the animator
+            Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
+
+            //Standing attacks
+            if (Player1Layer0.IsTag("Motion"))
+            {
+                if (Attacking == true)
+                {
+                    Attacking = false;
+                    if (AttackNumber == 1)
+                    {
+                        Animator.SetTrigger("LightPunch");
+                        HitsAI = false;
+                        StartCoroutine(SetAttacking());
+                    }
+                    if (AttackNumber == 2)
+                    {
+                        Animator.SetTrigger("HeavyPunch");
+                        HitsAI = false;
+                        StartCoroutine(SetAttacking());
+                    }
+                    if (AttackNumber == 3)
+                    {
+                        Animator.SetTrigger("LightKick");
+                        HitsAI = false;
+                        StartCoroutine(SetAttacking());
+                    }
+                    if (AttackNumber == 4)
+                    {
+                        Animator.SetTrigger("HeavyKick");
+                        HitsAI = false;
+                        StartCoroutine(SetAttacking());
+                    }
+                    if (Input.GetButtonDown("BlockPlayer2"))
+                    {
+                        Animator.SetTrigger("BlockOn");
+                    }
+                }
+            }
+
+            if (Player1Layer0.IsTag("Block"))
+            {
+                if (Input.GetButtonUp("BlockPlayer2"))
+                {
+                    Animator.SetTrigger("BlockOff");
+                }
+            }
+
+            //Crouching attack
+            if (Player1Layer0.IsTag("Crouching"))
+            {
                 Animator.SetTrigger("LightKick");
                 HitsAI = false;
                 Animator.SetBool("Crouch", false);
-        }
+            }
 
-        //Aerial moves
-        if (Player1Layer0.IsTag("Jumping"))
-        {
-            if (Input.GetButtonDown("Jump"))
+            //Aerial moves
+            if (Player1Layer0.IsTag("Jumping"))
             {
-                Animator.SetTrigger("HeavyKick");
-                HitsAI = false;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    Animator.SetTrigger("HeavyKick");
+                    HitsAI = false;
+                }
             }
         }
-
-
-
     }
      public void JumpUp()
     {

@@ -1216,7 +1216,7 @@ MonoBehaviour:
   Player1Red: {fileID: 1305890589}
   Player2Red: {fileID: 173338241}
   TimerText: {fileID: 1091226331}
-  LevelTime: 90
+  LevelTime: 20
 --- !u!114 &949521964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949521958}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb79e13f10f4e0447958681b86c3b965, type: 3}
   m_Name: 

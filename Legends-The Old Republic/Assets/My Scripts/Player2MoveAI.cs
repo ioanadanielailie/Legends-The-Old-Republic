@@ -53,193 +53,201 @@ public class Player2MoveAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OppDistance=Vector3.Distance(Opponent.transform.position, Player1.transform.position);
-
-        if (Player2Actions.FlyingJumpP2 == true)
+        if (SaveScript.TimeOut == true)
         {
-            CharacterWalkSpeed = JumpSpeed;
+            Animator.SetBool("Forward", false);
+            Animator.SetBool("Backward", false);
         }
-        else
+        if (SaveScript.TimeOut == false)
         {
-            CharacterWalkSpeed = MoveSpeed;
-        }
+            OppDistance = Vector3.Distance(Opponent.transform.position, Player1.transform.position);
 
-
-        //Check if we are knocked out
-        if (SaveScript.Player2Health<=0)
-        {
-            Animator.SetTrigger("KnockedOut");
-            Player1.GetComponent<Player2ActionsAI>().enabled = false;
-             StartCoroutine(KnockedOut());
-        }
-
-        if (SaveScript.Player1Health <= 0)
-        {
-            Animator.SetTrigger("Victory");
-            Player1.GetComponent<Player2ActionsAI>().enabled = false;
-            this.GetComponent<Player2MoveAI>().enabled = false;
-        }
-        //Listen to the Animator
-        Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
-
-        //Cannot exit screen
-        Vector3 ScreenBounds=Camera.main.WorldToScreenPoint(this.transform.position);
-        if(ScreenBounds.x > Screen.width-150)
-        {
-            CharacterCanWalkRight= false;
-        }
-        if (ScreenBounds.x < 150)
-        {
-            CharacterCanWalkLeft = false;
-        }
-        else if(ScreenBounds.x > 150 && ScreenBounds.x < Screen.width-150) 
-        {
-            CharacterCanWalkRight = true;
-            CharacterCanWalkLeft = true;
-        }
-
-        //Get the opponent's position
-        OpponentPosition=Opponent.transform.position;
-
-        //Facing left or right of the Opponent
-        if (Player2ActionsAI.Dazed == false)
-        {
-            if (OpponentPosition.x > Player1.transform.position.x)
+            if (Player2Actions.FlyingJumpP2 == true)
             {
-                StartCoroutine(FaceLeft());
-                if (Player1Layer0.IsTag("Motion"))
+                CharacterWalkSpeed = JumpSpeed;
+            }
+            else
+            {
+                CharacterWalkSpeed = MoveSpeed;
+            }
+
+
+            //Check if we are knocked out
+            if (SaveScript.Player2Health <= 0)
+            {
+                Animator.SetTrigger("KnockedOut");
+                Player1.GetComponent<Player2ActionsAI>().enabled = false;
+                StartCoroutine(KnockedOut());
+            }
+
+            if (SaveScript.Player1Health <= 0)
+            {
+                Animator.SetTrigger("Victory");
+                Player1.GetComponent<Player2ActionsAI>().enabled = false;
+                this.GetComponent<Player2MoveAI>().enabled = false;
+            }
+            //Listen to the Animator
+            Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
+
+            //Cannot exit screen
+            Vector3 ScreenBounds = Camera.main.WorldToScreenPoint(this.transform.position);
+            if (ScreenBounds.x > Screen.width - 150)
+            {
+                CharacterCanWalkRight = false;
+            }
+            if (ScreenBounds.x < 150)
+            {
+                CharacterCanWalkLeft = false;
+            }
+            else if (ScreenBounds.x > 150 && ScreenBounds.x < Screen.width - 150)
+            {
+                CharacterCanWalkRight = true;
+                CharacterCanWalkLeft = true;
+            }
+
+            //Get the opponent's position
+            OpponentPosition = Opponent.transform.position;
+
+            //Facing left or right of the Opponent
+            if (Player2ActionsAI.Dazed == false)
+            {
+                if (OpponentPosition.x > Player1.transform.position.x)
                 {
-                    Time.timeScale = 1.0f;
-                    Animator.SetBool("CanAttack", false);
-                    if (OppDistance > AttackDistance)
+                    StartCoroutine(FaceLeft());
+                    if (Player1Layer0.IsTag("Motion"))
                     {
-                        if (MoveAI == true)
+                        Time.timeScale = 1.0f;
+                        Animator.SetBool("CanAttack", false);
+                        if (OppDistance > AttackDistance)
+                        {
+                            if (MoveAI == true)
+                            {
+                                if (CharacterCanWalkRight == true)
+                                {
+                                    if (WalkRightAI == true)
+                                    {
+                                        Animator.SetBool("Forward", true);
+                                        Animator.SetBool("Backward", false);
+                                        AttackState = false;
+                                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                                    }
+                                }
+                            }
+                        }
+                        if (OppDistance < AttackDistance)
                         {
                             if (CharacterCanWalkRight == true)
                             {
-                                if (WalkRightAI == true)
+                                if (MoveAI == true)
                                 {
-                                    Animator.SetBool("Forward", true);
+                                    MoveAI = false;
+                                    Animator.SetBool("Forward", false);
                                     Animator.SetBool("Backward", false);
-                                    AttackState = false;
-                                    transform.Translate(CharacterWalkSpeed, 0, 0);
+                                    Animator.SetBool("CanAttack", true);
+                                    StartCoroutine(ForwardFalse());
                                 }
                             }
                         }
                     }
-                    if (OppDistance < AttackDistance)
+                }
+                if (OpponentPosition.x < Player1.transform.position.x)
+                {
+                    StartCoroutine(FaceRight());
+                    if (Player1Layer0.IsTag("Motion"))
                     {
-                        if (CharacterCanWalkRight == true)
+                        Time.timeScale = 1.0f;
+                        Animator.SetBool("CanAttack", false);
+                        if (OppDistance > AttackDistance)
                         {
                             if (MoveAI == true)
                             {
-                                MoveAI = false;
-                                Animator.SetBool("Forward", false);
-                                Animator.SetBool("Backward", false);
-                                Animator.SetBool("CanAttack", true);
-                                StartCoroutine(ForwardFalse());
+                                if (CharacterCanWalkLeft == true)
+                                {
+                                    if (WalkLeftAI == true)
+                                    {
+                                        Animator.SetBool("Backward", true);
+                                        Animator.SetBool("Forward", false);
+                                        AttackState = false;
+                                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                                    }
+                                }
                             }
                         }
-                    }
-                }
-            }
-            if (OpponentPosition.x < Player1.transform.position.x)
-            {
-                StartCoroutine(FaceRight());
-                if (Player1Layer0.IsTag("Motion"))
-                {
-                    Time.timeScale = 1.0f;
-                    Animator.SetBool("CanAttack", false);
-                    if (OppDistance > AttackDistance)
-                    {
-                        if (MoveAI == true)
+                        if (OppDistance < AttackDistance)
                         {
                             if (CharacterCanWalkLeft == true)
                             {
-                                if (WalkLeftAI == true)
+                                if (MoveAI == true)
                                 {
-                                    Animator.SetBool("Backward", true);
+                                    MoveAI = false;
                                     Animator.SetBool("Forward", false);
-                                    AttackState = false;
-                                    transform.Translate(-CharacterWalkSpeed, 0, 0);
+                                    Animator.SetBool("Backward", false);
+                                    Animator.SetBool("CanAttack", true);
+                                    StartCoroutine(ForwardFalse());
                                 }
-                            }
-                        }
-                    }
-                    if (OppDistance < AttackDistance)
-                    {
-                        if (CharacterCanWalkLeft == true)
-                        {
-                            if (MoveAI == true)
-                            {
-                                MoveAI = false;
-                                Animator.SetBool("Forward", false);
-                                Animator.SetBool("Backward", false);
-                                Animator.SetBool("CanAttack", true);
-                                StartCoroutine(ForwardFalse());
                             }
                         }
                     }
                 }
             }
-        }
-        //Jumping and crouching
-        if (Input.GetAxis("VerticalPlayer2") > 0)
-        {
-            if (IsJumping == false)
+            //Jumping and crouching
+            if (Input.GetAxis("VerticalPlayer2") > 0)
             {
-               IsJumping = true;
-               Animator.SetTrigger("Jump");
-                StartCoroutine(JumpPause());
+                if (IsJumping == false)
+                {
+                    IsJumping = true;
+                    Animator.SetTrigger("Jump");
+                    StartCoroutine(JumpPause());
+                }
             }
-        }
-        if (Defend==3)
-        {
-            Animator.SetBool("Crouch",true);
-            Defend= 0;
-        }
-        if(Defend==2)
-        {
-            if(IsBlocking== false)
+            if (Defend == 3)
             {
-                IsBlocking = true;
-                Animator.SetTrigger("BlockOn");
-                StartCoroutine(EndBlock());
+                Animator.SetBool("Crouch", true);
+                Defend = 0;
             }
-        }
-        if (Defend==4)
-        {
-            Animator.SetTrigger("Jump");
-            Defend= 0;
-        }
-        //Resets the restrict
-        if (Restrict.gameObject.activeInHierarchy == false)
-        {
-            WalkLeftAI = true;
-            WalkRightAI = true;
-        }
+            if (Defend == 2)
+            {
+                if (IsBlocking == false)
+                {
+                    IsBlocking = true;
+                    Animator.SetTrigger("BlockOn");
+                    StartCoroutine(EndBlock());
+                }
+            }
+            if (Defend == 4)
+            {
+                Animator.SetTrigger("Jump");
+                Defend = 0;
+            }
+            //Resets the restrict
+            if (Restrict.gameObject.activeInHierarchy == false)
+            {
+                WalkLeftAI = true;
+                WalkRightAI = true;
+            }
 
 
-        if (Player1Layer0.IsTag("Block"))
-        {
-            RB.isKinematic = true;
-            BoxCollider.enabled = false;
-            CapsuleCollider.enabled = false;
-        }
-        else if (Player1Layer0.IsTag("Motion"))
-        {
-            RB.isKinematic = false;
-            BoxCollider.enabled = true;
-            CapsuleCollider.enabled = true;
+            if (Player1Layer0.IsTag("Block"))
+            {
+                RB.isKinematic = true;
+                BoxCollider.enabled = false;
+                CapsuleCollider.enabled = false;
+            }
+            else if (Player1Layer0.IsTag("Motion"))
+            {
+                RB.isKinematic = false;
+                BoxCollider.enabled = true;
+                CapsuleCollider.enabled = true;
 
-        }
-        if (Player1Layer0.IsTag("Crouching"))
-        {
-            BoxCollider.enabled = false;
-        }
-        if (Player1Layer0.IsTag("Sweep"))
-        {
-            BoxCollider.enabled = false;
+            }
+            if (Player1Layer0.IsTag("Crouching"))
+            {
+                BoxCollider.enabled = false;
+            }
+            if (Player1Layer0.IsTag("Sweep"))
+            {
+                BoxCollider.enabled = false;
+            }
         }
     }
 

@@ -30,12 +30,15 @@ public class Player1Move : MonoBehaviour
     public Collider CapsuleCollider;
     private float Timer = 2.0f;
     private float CrouchTime = 0.0f;
+    private GameObject WinCondition;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Opponent = GameObject.Find("Player2");
+        WinCondition = GameObject.Find("WinCondition");
+        WinCondition.gameObject.SetActive(false);
         FacingLeftPlayer1= false;
         FacingRightPlayer1 = true;
         WalkLeftPlayer1= true;
@@ -82,12 +85,16 @@ public class Player1Move : MonoBehaviour
                 Animator.SetTrigger("KnockedOut");
                 Player1.GetComponent<Player1Actions>().enabled = false;
                 StartCoroutine(KnockedOut());
+                WinCondition.gameObject.SetActive(true);
+                WinCondition.gameObject.GetComponent<LoseWin>().enabled= true;
             }
             if (SaveScript.Player2Health <= 0)
             {
                 Animator.SetTrigger("Victory");
                 Player1.GetComponent<Player1Actions>().enabled = false;
                 this.GetComponent<Player1Move>().enabled = false;
+                WinCondition.gameObject.SetActive(true);
+                WinCondition.gameObject.GetComponent<LoseWin>().enabled = true;
             }
 
             //Listen to the Animator

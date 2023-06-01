@@ -15,7 +15,7 @@ public class HealthBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SaveScript.TimeOut = false;
+        SaveScript.TimeOut = true;
         
     }
 
@@ -27,7 +27,7 @@ public class HealthBars : MonoBehaviour
         {
             LevelTime -= 1 * Time.deltaTime;
         }
-        if(LevelTime <= 0.9)
+        if(LevelTime <= 0.1)
         {
             SaveScript.TimeOut = true;
         }

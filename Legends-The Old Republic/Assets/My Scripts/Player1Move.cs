@@ -53,6 +53,18 @@ public class Player1Move : MonoBehaviour
         {
             Animator.SetBool("Forward", false);
             Animator.SetBool("Backward", false);
+            //Get the opponent's position
+            OpponentPosition = Opponent.transform.position;
+
+            //Facing left or right of the Opponent
+            if (OpponentPosition.x > Player1.transform.position.x)
+            {
+                StartCoroutine(FaceLeft());
+            }
+            if (OpponentPosition.x < Player1.transform.position.x)
+            {
+                StartCoroutine(FaceRight());
+            }
         }
         if (SaveScript.TimeOut == false)
         {

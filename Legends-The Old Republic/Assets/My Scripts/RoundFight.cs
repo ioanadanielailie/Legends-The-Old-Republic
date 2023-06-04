@@ -9,6 +9,7 @@ public class RoundFight : MonoBehaviour
     public GameObject Round3Text;
     public GameObject FightText;
     public AudioSource MyPlayer;
+    public AudioSource MusicPlayer;
     public AudioClip FightAudio;
     public AudioClip Round1Audio;
     public AudioClip Round2Audio;
@@ -41,6 +42,7 @@ public class RoundFight : MonoBehaviour
             MyPlayer.Play();
             yield return new WaitForSeconds(PauseTime);
             FightText.gameObject.SetActive(false);
+            MusicPlayer.Play();
             SaveScript.TimeOut = false;
             this.gameObject.SetActive(false);
         }
@@ -59,6 +61,7 @@ public class RoundFight : MonoBehaviour
             MyPlayer.Play();
             yield return new WaitForSeconds(PauseTime);
             FightText.gameObject.SetActive(false);
+            MusicPlayer.Play();
             SaveScript.TimeOut = false;
             this.gameObject.SetActive(false);
         }
@@ -77,6 +80,7 @@ public class RoundFight : MonoBehaviour
             MyPlayer.Play();
             yield return new WaitForSeconds(PauseTime);
             FightText.gameObject.SetActive(false);
+            MusicPlayer.Play();
             SaveScript.TimeOut = false;
             this.gameObject.SetActive(false);
         }

@@ -786,6 +786,7 @@ MonoBehaviour:
   Round3Text: {fileID: 1832129892}
   FightText: {fileID: 1369263935}
   MyPlayer: {fileID: 352272123}
+  MusicPlayer: {fileID: 949521966}
   FightAudio: {fileID: 8300000, guid: 9da33ab5cf1a77e4cb5b37d95ceff5be, type: 3}
   Round1Audio: {fileID: 8300000, guid: ea91e2a217c897b49a7bfa7e13bf401e, type: 3}
   Round2Audio: {fileID: 8300000, guid: d972fc11f1bc75c408f396ae8c497c69, type: 3}
@@ -2070,7 +2071,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7e18be9dd3635c94caa644e9a8a59123, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1e69668668d2d7a4ea120ecf74357ba9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
@@ -3473,7 +3474,7 @@ MonoBehaviour:
   LoseAudio: {fileID: 8300000, guid: e1c22ccff3a336f40af34c788e740dd1, type: 3}
   Player1WinsAudio: {fileID: 8300000, guid: 963edba26aeda9f409f94176d582ab28, type: 3}
   Player2WinsAudio: {fileID: 8300000, guid: 49cadd91d5867f846b6ce802343b2dcf, type: 3}
-  PauseTime: 1
+  PauseTime: 2
 --- !u!82 &1471824883
 AudioSource:
   m_ObjectHideFlags: 0

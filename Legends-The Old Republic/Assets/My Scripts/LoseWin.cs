@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseWin : MonoBehaviour
 {
@@ -34,12 +35,14 @@ public class LoseWin : MonoBehaviour
             {
                 WinText.gameObject.SetActive(true);
                 MyPlayer.Play();
+                SaveScript.Player1Wins++;
             }
             else if(SaveScript.Player1Mode == false)
             {
                 Player1WinText.gameObject.SetActive(true);
                 MyPlayer.clip = Player1WinsAudio;
                 MyPlayer.Play();
+                SaveScript.Player1Wins++;
             }
 
         }
@@ -50,17 +53,20 @@ public class LoseWin : MonoBehaviour
                 LoseText.gameObject.SetActive(true);
                 MyPlayer.clip = LoseAudio;
                 MyPlayer.Play();
+                SaveScript.Player2Wins++;
             }
             else if(SaveScript.Player1Mode==false)
             {
                 Player2WinText.gameObject.SetActive(true);
                 MyPlayer.clip = Player2WinsAudio;
                 MyPlayer.Play();
+                SaveScript.Player2Wins++;
             }
 
         }
         yield return new WaitForSeconds(PauseTime);
-        //SaveScript.TimeOut = false;
+        SceneManager.LoadScene(0);
+        
  
 
     }

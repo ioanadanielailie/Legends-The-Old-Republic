@@ -21,6 +21,8 @@ public class HealthBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
+        SaveScript.Round++;
         SaveScript.TimeOut = true;
         if(SaveScript.Player1Wins==1)
         {

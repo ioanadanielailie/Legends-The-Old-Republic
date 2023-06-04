@@ -78,13 +78,13 @@
     <Compile Include="Assets\My Scripts\Player1Move.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\My Scripts\Player2MoveRestrict.cs" />
+    <Compile Include="Assets\My Scripts\LoseWin.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\My Scripts\Player2Actions.cs" />
     <Compile Include="Assets\My Scripts\MenuButtons.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\My Scripts\Player2TriggerAI.cs" />
-    <Compile Include="Assets\My Scripts\LoseWin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

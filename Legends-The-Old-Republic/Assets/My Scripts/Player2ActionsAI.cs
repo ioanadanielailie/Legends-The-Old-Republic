@@ -176,7 +176,8 @@ public class Player2ActionsAI : MonoBehaviour
     public void RandomAttack()
     {
         AttackNumber = Random.Range(1, 5);
-        StartCoroutine(SetAttacking());    }
+        //StartCoroutine(SetAttacking()); 
+    }
 
 
     IEnumerator PunchSlideSmoothly() 

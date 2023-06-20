@@ -20,8 +20,6 @@ public class SaveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        P1Select = "MorakP1";
-        P2Select = "MariaP2";
         Player1Health = 1.0f;
         Player2Health = 1.0f;
     }

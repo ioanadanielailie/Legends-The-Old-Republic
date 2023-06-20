@@ -88,6 +88,8 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\My Scripts\Player2TriggerAI.cs" />
+    <Compile Include="Assets\My Scripts\SwitchOnP1.cs" />
+    <Compile Include="Assets\My Scripts\SwitchOnP2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

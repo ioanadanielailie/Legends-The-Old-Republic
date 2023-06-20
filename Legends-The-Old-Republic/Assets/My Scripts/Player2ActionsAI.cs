@@ -31,6 +31,7 @@ public class Player2ActionsAI : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         MyPlayerAudioSource = GetComponent<AudioSource>();
+        Dazed = false;
     }
 
     // Update is called once per frame

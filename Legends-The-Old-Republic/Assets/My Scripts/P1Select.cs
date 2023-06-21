@@ -38,6 +38,9 @@ public class P1Select : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SaveScript.Round = 0;
+        SaveScript.Player1Wins= 0;
+        SaveScript.Player2Wins= 0;
         ChangeCharacter= true;
         Time.timeScale = 0.6f;
         MyPlayer = GetComponent<AudioSource>();
@@ -206,13 +209,17 @@ public class P1Select : MonoBehaviour
 
         if(SaveScript.Player1Mode==true)
         {
-            this.gameObject.GetComponent<CPUSelect>().enabled = true;
+            Debug.Log("Abc");
             this.gameObject.GetComponent<P1Select>().enabled = false;
+            this.gameObject.GetComponent<P2Select>().enabled = false;
+            this.gameObject.GetComponent<CPUSelect>().enabled = true;           
         }
         if (SaveScript.Player1Mode == false)
         {
-            this.gameObject.GetComponent<P2Select>().enabled = true;
+            Debug.Log("def");
             this.gameObject.GetComponent<P1Select>().enabled = false;
+            this.gameObject.GetComponent<CPUSelect>().enabled = false;
+            this.gameObject.GetComponent<P2Select>().enabled = true;
         }
     }
 }

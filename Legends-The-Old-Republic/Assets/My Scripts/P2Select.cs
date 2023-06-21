@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class CPUSelect : MonoBehaviour
+public class P2Select : MonoBehaviour
 {
     public int MaxIcons = 6;
     public int IconsPerRow = 3;
@@ -35,6 +35,7 @@ public class CPUSelect : MonoBehaviour
 
     public string CharacterSelectionP2;
     private AudioSource MyPlayer;
+    public int Scene = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -110,7 +111,7 @@ public class CPUSelect : MonoBehaviour
 
             SaveScript.P2Select = CharacterSelectionP2;
             MyPlayer.Play();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(Scene);
         }
 
 

@@ -17,6 +17,7 @@ public class SaveScript : MonoBehaviour
     public static string P2Select;
     public static GameObject Player1Load;
     public static GameObject Player2Load;
+    public static int LevelNumber = 1;
     // Start is called before the first frame update
     void Start()
     {

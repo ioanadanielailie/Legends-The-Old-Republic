@@ -14,7 +14,7 @@ public class LoseWin : MonoBehaviour
     public AudioClip Player1WinsAudio;
     public AudioClip Player2WinsAudio;
     public float PauseTime = 1.0f;
-    public int Scene = 2;
+    private int Scene = 3;
     // Start is called before the first frame update
     void Start()
     {

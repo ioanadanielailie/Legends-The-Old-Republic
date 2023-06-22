@@ -18,6 +18,7 @@ public class SaveScript : MonoBehaviour
     public static GameObject Player1Load;
     public static GameObject Player2Load;
     public static int LevelNumber = 1;
+    public static float DifficultyAmt = 1.0f;
     // Start is called before the first frame update
     void Start()
     {

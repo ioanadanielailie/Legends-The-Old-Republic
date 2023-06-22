@@ -118,7 +118,7 @@ public class LevelSelect : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             SaveScript.LevelNumber = CurrentLevel;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
 
         }
     }

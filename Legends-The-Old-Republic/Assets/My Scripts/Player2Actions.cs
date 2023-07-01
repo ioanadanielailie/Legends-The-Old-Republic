@@ -140,6 +140,11 @@ public class Player2Actions : MonoBehaviour
         FlyingJumpP2 = false;
     }
 
+    public void ResetTime()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     public void MoveForHeavyPunch()
     {
         StartCoroutine(PunchSlideSmoothly());

@@ -166,6 +166,11 @@ public class Player2ActionsAI : MonoBehaviour
         FlyingJumpAI = false;
     }
 
+    public void ResetTime()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     public void MoveForHeavyPunch()
     {
         StartCoroutine(PunchSlideSmoothly());

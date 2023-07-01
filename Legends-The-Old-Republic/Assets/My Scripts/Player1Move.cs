@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+
 
 public class Player1Move : MonoBehaviour
 {
     private Animator Animator;
     public float CharacterWalkSpeed=0.001f;
     public float JumpSpeed = 0.05f;
-    public float MoveSpeed;
+    private float MoveSpeed;
     private bool IsJumping = false;
     private AnimatorStateInfo Player1Layer0;
     private bool CharacterCanWalkRight = true;
@@ -151,7 +154,8 @@ public class Player1Move : MonoBehaviour
                         if (WalkRightPlayer1 == true)
                         {
                             Animator.SetBool("Forward", true);
-                            transform.Translate(CharacterWalkSpeed,0, 0);
+                            //transform.Translate(CharacterWalkSpeed,0, 0);
+                            transform.Translate(new Vector3(CharacterWalkSpeed, 0, 0)*Time.deltaTime);
                         }
                     }
                 }
@@ -162,7 +166,8 @@ public class Player1Move : MonoBehaviour
                         if (WalkLeftPlayer1 == true)
                         {
                             Animator.SetBool("Backward", true);
-                            transform.Translate(-CharacterWalkSpeed, 0, 0);
+                            //transform.Translate(-CharacterWalkSpeed, 0, 0);
+                            transform.Translate(new Vector3(-CharacterWalkSpeed, 0, 0) * Time.deltaTime);
                         }
                     }
                 }

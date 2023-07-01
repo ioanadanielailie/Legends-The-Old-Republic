@@ -131,7 +131,7 @@ public class Player2Move : MonoBehaviour
                         if (WalkRightPlayer2 == true)
                         {
                             Animator.SetBool("Forward", true);
-                            transform.Translate(CharacterWalkSpeed, 0, 0);
+                            transform.Translate(new Vector3(CharacterWalkSpeed, 0, 0) * Time.deltaTime);
                         }
                     }
                 }
@@ -142,7 +142,7 @@ public class Player2Move : MonoBehaviour
                         if (WalkLeftPlayer2 == true)
                         {
                             Animator.SetBool("Backward", true);
-                            transform.Translate(-CharacterWalkSpeed, 0, 0);
+                            transform.Translate(new Vector3(-CharacterWalkSpeed, 0, 0) * Time.deltaTime);
                         }
                     }
                 }

@@ -137,7 +137,7 @@ public class Player2MoveAI : MonoBehaviour
                                         Animator.SetBool("Forward", true);
                                         Animator.SetBool("Backward", false);
                                         AttackState = false;
-                                        transform.Translate(CharacterWalkSpeed, 0, 0);
+                                        transform.Translate(new Vector3(CharacterWalkSpeed, 0, 0) * Time.deltaTime);
                                     }
                                 }
                             }
@@ -175,7 +175,7 @@ public class Player2MoveAI : MonoBehaviour
                                         Animator.SetBool("Backward", true);
                                         Animator.SetBool("Forward", false);
                                         AttackState = false;
-                                        transform.Translate(-CharacterWalkSpeed, 0, 0);
+                                        transform.Translate(new Vector3(-CharacterWalkSpeed, 0, 0) * Time.deltaTime);
                                     }
                                 }
                             }

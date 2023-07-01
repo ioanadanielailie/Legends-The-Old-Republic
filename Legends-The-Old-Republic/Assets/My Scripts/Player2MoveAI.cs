@@ -108,6 +108,15 @@ public class Player2MoveAI : MonoBehaviour
             //Get the opponent's position
             OpponentPosition = Opponent.transform.position;
 
+            if (Player1Layer0.IsTag("React"))
+            {
+                SaveScript.P2Reacting = true;
+            }
+            else
+            {
+                SaveScript.P2Reacting = false;
+            }
+
             //Facing left or right of the Opponent
             if (Player2ActionsAI.Dazed == false)
             {
@@ -116,7 +125,6 @@ public class Player2MoveAI : MonoBehaviour
                     StartCoroutine(FaceLeft());
                     if (Player1Layer0.IsTag("Motion"))
                     {
-                        Time.timeScale = 1.0f;
                         Animator.SetBool("CanAttack", false);
                         if (OppDistance > AttackDistance)
                         {
@@ -155,7 +163,6 @@ public class Player2MoveAI : MonoBehaviour
                     StartCoroutine(FaceRight());
                     if (Player1Layer0.IsTag("Motion"))
                     {
-                        Time.timeScale = 1.0f;
                         Animator.SetBool("CanAttack", false);
                         if (OppDistance > AttackDistance)
                         {
@@ -190,16 +197,6 @@ public class Player2MoveAI : MonoBehaviour
                     }
                 }
             }
-            //Jumping and crouching
-            //if (Input.GetAxis("VerticalPlayer2") > 0)
-            //{
-            //    if (IsJumping == false)
-            //    {
-            //        IsJumping = true;
-            //        Animator.SetTrigger("Jump");
-            //        StartCoroutine(JumpPause());
-            //    }
-            //}
             if (Defend == 3)
             {
                 Animator.SetBool("Crouch", true);
@@ -253,32 +250,35 @@ public class Player2MoveAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("FistLight"))
+        if (SaveScript.P2Reacting == false)
         {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LPunch;
-            MyPlayer.Play();
-            Defend = Random.Range(0, 5);
-        }
-        if (other.gameObject.CompareTag("FistHeavy"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = HPunch;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickHeavy"))
-        {
-            Animator.SetTrigger("BigReact");
-            MyPlayer.clip = HKick;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickLight"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LKick;
-            MyPlayer.Play();
-            Defend = Random.Range(0, 5);
+            if (other.gameObject.CompareTag("FistLight"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = LPunch;
+                MyPlayer.Play();
+                Defend = Random.Range(0, 5);
+            }
+            if (other.gameObject.CompareTag("FistHeavy"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = HPunch;
+                MyPlayer.Play();
+            }
+            if (other.gameObject.CompareTag("KickHeavy"))
+            {
+                Animator.SetTrigger("BigReact");
+                MyPlayer.clip = HKick;
+                MyPlayer.Play();
+            }
+            if (other.gameObject.CompareTag("KickLight"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = LKick;
+                MyPlayer.Play();
+                Defend = Random.Range(0, 5);
 
+            }
         }
     }
 

@@ -63,6 +63,7 @@
     <Compile Include="Assets\My Scripts\Player1Jump.cs" />
     <Compile Include="Assets\My Scripts\LevelSpawn.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\My Scripts\MenuButtons.cs" />
     <Compile Include="Assets\My Scripts\SwitchOnP2.cs" />
     <Compile Include="Assets\My Scripts\Player2Trigger.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\My Scripts\Player1Trigger.cs" />
     <Compile Include="Assets\My Scripts\RoundFight.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\My Scripts\CloseMenu.cs" />
     <Compile Include="Assets\My Scripts\P1JumpScript.cs" />
     <Compile Include="Assets\My Scripts\Player2Move.cs" />
     <Compile Include="Assets\My Scripts\P2JumpScript.cs" />
@@ -88,15 +90,13 @@
     <Compile Include="Assets\My Scripts\Player2Actions.cs" />
     <Compile Include="Assets\My Scripts\P2MoveRestrict.cs" />
     <Compile Include="Assets\My Scripts\P1Select.cs" />
+    <Compile Include="Assets\My Scripts\OptionsScript.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\My Scripts\SwitchOnP1.cs" />
     <Compile Include="Assets\My Scripts\P2Select.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\My Scripts\LevelSelect.cs" />
     <Compile Include="Assets\My Scripts\Player2TriggerAI.cs" />
-    <Compile Include="Assets\My Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\My Scripts\CloseMenu.cs" />
-    <Compile Include="Assets\My Scripts\OptionsScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

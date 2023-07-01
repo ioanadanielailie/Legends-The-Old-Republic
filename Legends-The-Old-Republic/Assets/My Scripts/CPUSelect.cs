@@ -30,6 +30,7 @@ public class CPUSelect : MonoBehaviour
     private int IconNumber = 1;
     private int RowNumber = 1;
     private float PauseTime = 1.0f;
+    private float TimerMax = 0.6f;
     private bool TimeCountDown = false;
     private bool ChangeCharacter = false;
 
@@ -43,12 +44,12 @@ public class CPUSelect : MonoBehaviour
         ChangeCharacter = true;
         Time.timeScale = 0.6f;
         MyPlayer = GetComponent<AudioSource>();
+        PauseTime = TimerMax;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(SaveScript.P1Select);
         if (ChangeCharacter == true)
         {
             if (IconNumber == 1)
@@ -115,7 +116,6 @@ public class CPUSelect : MonoBehaviour
         }
 
 
-        Debug.Log("Icon Number = " + IconNumber);
         if (TimeCountDown == true)
         {
             if (PauseTime > 0.1f)
@@ -124,13 +124,13 @@ public class CPUSelect : MonoBehaviour
             }
             if (PauseTime <= 0.1f)
             {
-                PauseTime = 1.0f;
+                PauseTime = TimerMax;
                 TimeCountDown = false;
             }
         }
         if (Input.GetAxis("Horizontal") > 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (IconNumber < IconsPerRow * RowNumber)
                 {
@@ -142,7 +142,7 @@ public class CPUSelect : MonoBehaviour
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (IconNumber > IconsPerRow * (RowNumber - 1) + 1)
                 {
@@ -154,7 +154,7 @@ public class CPUSelect : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber < MaxRows)
                 {
@@ -167,7 +167,7 @@ public class CPUSelect : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") > 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber > 1)
                 {

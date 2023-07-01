@@ -22,6 +22,7 @@ public class LevelSelect : MonoBehaviour
     void Start()
     {
         LevelBG1.gameObject.SetActive(true);
+        Time.timeScale= 1.0f;
     }
 
     // Update is called once per frame

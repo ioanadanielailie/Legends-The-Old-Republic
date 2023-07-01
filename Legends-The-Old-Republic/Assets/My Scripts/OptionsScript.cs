@@ -10,12 +10,10 @@ public class OptionsScript : MonoBehaviour
     public Slider SFX;
     public AudioMixer MusicMixer;
     public AudioMixer SFXMixer;
-
-    // Start is called before the first frame update
     void Start()
     {
-        MusicMixer.SetFloat("MusicLevel", 0);
-        SFXMixer.SetFloat("SFXLevel", 0);
+        MusicMixer.SetFloat("MusicLevel", SaveScript.MusicVol);
+        SFXMixer.SetFloat("SFXLevel", SaveScript.MusicVol);
     }
     public void DifficultyEasy()
     {
@@ -27,14 +25,16 @@ public class OptionsScript : MonoBehaviour
     }
     public void DifficultyExpert()
     {
-        SaveScript.DifficultyAmt = 0.5f;
+        SaveScript.DifficultyAmt = 2.0f;
     }
     public void MusicVolume()
     {
         MusicMixer.SetFloat("MusicLevel", Music.value);
+        SaveScript.MusicVol = Music.value;
     }
     public void SFXVolume()
     {
         SFXMixer.SetFloat("SFXLevel", SFX.value);
+        SaveScript.SFXVol = SFX.value;
     }
 }

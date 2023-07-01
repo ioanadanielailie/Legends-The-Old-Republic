@@ -29,7 +29,18 @@ public class Player2ActionsAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AttackRate = AttackRate * SaveScript.DifficultyAmt;
+        if(SaveScript.DifficultyAmt==1.0)
+        {
+            AttackRate = 0.3f;
+        }
+        if (SaveScript.DifficultyAmt == 2.0)
+        {
+            AttackRate = 1.0f;
+        }
+        if (SaveScript.DifficultyAmt == 3.0)
+        {
+            AttackRate = 2.0f;
+        }
         Animator = GetComponent<Animator>();
         MyPlayerAudioSource = GetComponent<AudioSource>();
         Dazed = false;

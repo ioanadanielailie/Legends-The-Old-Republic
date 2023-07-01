@@ -79,6 +79,15 @@ public class Player2Move : MonoBehaviour
             //Listen to the Animator
             Player1Layer0 = Animator.GetCurrentAnimatorStateInfo(0);
 
+            if (Player1Layer0.IsTag("React"))
+            {
+                SaveScript.P2Reacting = true;
+            }
+            else
+            {
+                SaveScript.P2Reacting = false;
+            }
+
             //Cannot exit screen
             Vector3 ScreenBounds = Camera.main.WorldToScreenPoint(this.transform.position);
             if (ScreenBounds.x > Screen.width - 150)
@@ -115,7 +124,6 @@ public class Player2Move : MonoBehaviour
             //Walking left and right
             if (Player1Layer0.IsTag("Motion"))
             {
-                Time.timeScale = 1.0f;
                 if (Input.GetAxis("HorizontalPlayer2") > 0)
                 {
                     if (CharacterCanWalkRight == true)
@@ -190,29 +198,32 @@ public class Player2Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("FistLight"))
+        if (SaveScript.P2Reacting == false)
         {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LPunch;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("FistHeavy"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = HPunch;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickHeavy"))
-        {
-            Animator.SetTrigger("BigReact");
-            MyPlayer.clip = HKick;
-            MyPlayer.Play();
-        }
-        if (other.gameObject.CompareTag("KickLight"))
-        {
-            Animator.SetTrigger("HeadReact");
-            MyPlayer.clip = LKick;
-            MyPlayer.Play();
+            if (other.gameObject.CompareTag("FistLight"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = LPunch;
+                MyPlayer.Play();
+            }
+            if (other.gameObject.CompareTag("FistHeavy"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = HPunch;
+                MyPlayer.Play();
+            }
+            if (other.gameObject.CompareTag("KickHeavy"))
+            {
+                Animator.SetTrigger("BigReact");
+                MyPlayer.clip = HKick;
+                MyPlayer.Play();
+            }
+            if (other.gameObject.CompareTag("KickLight"))
+            {
+                Animator.SetTrigger("HeadReact");
+                MyPlayer.clip = LKick;
+                MyPlayer.Play();
+            }
         }
     }
 

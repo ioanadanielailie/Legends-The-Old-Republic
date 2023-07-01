@@ -29,6 +29,7 @@ public class P1Select : MonoBehaviour
     private int IconNumber=1;
     private int RowNumber = 1;
     private float PauseTime = 1.0f;
+    public float TimerMax = 0.6f;
     private bool TimeCountDown = false;
     private bool ChangeCharacter = false;
 
@@ -44,6 +45,7 @@ public class P1Select : MonoBehaviour
         ChangeCharacter= true;
         Time.timeScale = 0.6f;
         MyPlayer = GetComponent<AudioSource>();
+        PauseTime = TimerMax;
     }
 
     // Update is called once per frame
@@ -114,9 +116,6 @@ public class P1Select : MonoBehaviour
             MyPlayer.Play();
             NextPlayer();
         }
-
-
-        Debug.Log("Icon Number = " + IconNumber);
         if (TimeCountDown == true)
         {
             if(PauseTime > 0.1f)
@@ -125,13 +124,13 @@ public class P1Select : MonoBehaviour
             }
             if(PauseTime <= 0.1f)
             {
-                PauseTime = 1.0f;
+                PauseTime = TimerMax;
                 TimeCountDown = false;
             }
         }
         if(Input.GetAxis("Horizontal")>0)
         {
-            if(PauseTime == 1.0f) 
+            if(PauseTime == TimerMax) 
             {
                 if(IconNumber < IconsPerRow* RowNumber)
                 {
@@ -143,7 +142,7 @@ public class P1Select : MonoBehaviour
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (IconNumber > IconsPerRow * (RowNumber-1)+1)
                 {
@@ -155,7 +154,7 @@ public class P1Select : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber < MaxRows)
                 {
@@ -168,7 +167,7 @@ public class P1Select : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") > 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber > 1)
                 {
@@ -209,14 +208,12 @@ public class P1Select : MonoBehaviour
 
         if(SaveScript.Player1Mode==true)
         {
-            Debug.Log("Abc");
             this.gameObject.GetComponent<P1Select>().enabled = false;
             this.gameObject.GetComponent<P2Select>().enabled = false;
             this.gameObject.GetComponent<CPUSelect>().enabled = true;           
         }
         if (SaveScript.Player1Mode == false)
         {
-            Debug.Log("def");
             this.gameObject.GetComponent<P1Select>().enabled = false;
             this.gameObject.GetComponent<CPUSelect>().enabled = false;
             this.gameObject.GetComponent<P2Select>().enabled = true;

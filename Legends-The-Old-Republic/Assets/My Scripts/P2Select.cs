@@ -30,6 +30,7 @@ public class P2Select : MonoBehaviour
     private int IconNumber=1;
     private int RowNumber = 1;
     private float PauseTime = 1.0f;
+    public float TimerMax = 0.6f;
     private bool TimeCountDown = false;
     private bool ChangeCharacter = false;
 
@@ -43,6 +44,7 @@ public class P2Select : MonoBehaviour
         ChangeCharacter= true;
         Time.timeScale = 0.6f;
         MyPlayer = GetComponent<AudioSource>();
+        PauseTime = TimerMax;
     }
 
     // Update is called once per frame
@@ -113,9 +115,6 @@ public class P2Select : MonoBehaviour
             MyPlayer.Play();
             SceneManager.LoadScene(Scene);
         }
-
-
-        Debug.Log("Icon Number = " + IconNumber);
         if (TimeCountDown == true)
         {
             if(PauseTime > 0.1f)
@@ -124,13 +123,13 @@ public class P2Select : MonoBehaviour
             }
             if(PauseTime <= 0.1f)
             {
-                PauseTime = 1.0f;
+                PauseTime = TimerMax;
                 TimeCountDown = false;
             }
         }
         if(Input.GetAxis("HorizontalPlayer2")>0)
         {
-            if(PauseTime == 1.0f) 
+            if(PauseTime == TimerMax) 
             {
                 if(IconNumber < IconsPerRow* RowNumber)
                 {
@@ -142,7 +141,7 @@ public class P2Select : MonoBehaviour
         }
         if (Input.GetAxis("HorizontalPlayer2") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (IconNumber > IconsPerRow * (RowNumber-1)+1)
                 {
@@ -154,7 +153,7 @@ public class P2Select : MonoBehaviour
         }
         if (Input.GetAxis("VerticalPlayer2") < 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber < MaxRows)
                 {
@@ -167,7 +166,7 @@ public class P2Select : MonoBehaviour
         }
         if (Input.GetAxis("VerticalPlayer2") > 0)
         {
-            if (PauseTime == 1.0f)
+            if (PauseTime == TimerMax)
             {
                 if (RowNumber > 1)
                 {

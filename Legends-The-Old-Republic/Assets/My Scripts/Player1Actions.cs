@@ -142,6 +142,10 @@ public class Player1Actions : MonoBehaviour
     {
         FlyingJumpP1 = false;
     }
+    public void ResetTime()
+    {
+        Time.timeScale = 1.0f;
+    }
 
     public void MoveForHeavyPunch()
     {
@@ -156,14 +160,14 @@ public class Player1Actions : MonoBehaviour
         MyPlayerAudioSource.clip = Punch;
         MyPlayerAudioSource.Play();
     }
-    public void RandomAttack()
-    {
-
-    }
     public void KickSound()
     {
         MyPlayerAudioSource.clip = Kick;
         MyPlayerAudioSource.Play();
+    }
+    public void RandomAttack()
+    {
+
     }
 
 
